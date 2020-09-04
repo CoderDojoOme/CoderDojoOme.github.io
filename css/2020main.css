@@ -1,0 +1,377 @@
+@charset "utf-8";
+/* CSS Document */
+/* PC用CSS */
+@media print, screen and (min-width: 640px) {
+
+
+
+
+.geeknavi {
+	clear: both;
+	margin: 2px;
+	text-align: left;
+	background: #009900;
+	color: #FFFFFF;
+	padding: 2px;
+}
+
+.geeknavi a:link {
+	color: #FFFFFF;
+}
+.geeknavi a:visited {
+	color: #66FFCC;
+}
+.geeknavi a:hover {
+	color: #FFCCFF;
+}
+.geeknavi a:active {
+	color: #66FF66;
+}
+
+.geekhr {
+  height:0px;
+  border-radius: 2px;
+  border: 2px solid hsl(0, 0%, 60%);
+  width: 80%;
+}
+
+#bbs {
+	position: relative;
+	margin-top: 8px;
+	margin-left: 8px;
+	height:1600px;
+}
+
+body {
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+	background-attachment: fixed;
+	background-image: url(img/background.gif);
+	background-repeat: repeat;
+	height: auto;
+	text-align: center;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+
+#wrapper {
+	width: 830px;
+	margin: 0 auto;
+	text-align:left;
+}
+
+#container {
+	width: 825px;
+	background: #FFFFFF;
+	border: 0px solid #000000;
+	text-align: left;
+	padding: 2px;
+	padding-top: 80px;
+	margin-right: auto;
+	margin-bottom: 24px;
+	margin-left: auto;
+	height: auto;
+}
+
+#container2 {
+	width: 90%;
+	background: #FFFFFF;
+	border: 0px solid #000000;
+	text-align: left;
+	padding: 2px;
+	padding-top: 60px;
+	margin-right: auto;
+	margin-bottom: 24px;
+	margin-left: auto;
+	height: auto;
+}
+
+
+/* firebase */
+#blockFB {
+	position: absolute;
+	margin-top: 700px;
+	margin-right: 0px;
+	margin-left: 832px;
+	height:auto;
+	top: 0px;
+}
+
+#blockAD {
+	position: absolute;
+	margin-top: 8px;
+	margin-right: 0px;
+	margin-left: 832px;
+	height:auto;
+	top: 0px;
+}
+
+
+/* Header */
+#header {
+	margin: 0 auto;
+}
+
+
+
+.blockContact {
+	text-align: right;
+	margin-left: 332px;
+	font-size: small;
+	padding-top: 4px;
+	padding-right: 10px;
+}
+
+.blockLeft {
+	float: left;
+	width: 328px;
+	padding: 0px;
+	height:auto;
+}
+
+.blockRight {
+	margin-left: 330px;
+	padding: 4px;
+}
+
+.blockMain {
+	clear: both;
+	margin: 2px;
+	padding: 0px;
+	font-size: small;
+}
+.blockList {
+	font-size: small;
+	padding: 0px;
+	text-align: left;
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	margin-left: 30px;
+}
+
+
+.noSpace {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:0px;
+}
+
+.noSpace img {
+	vertical-align:bottom;
+}
+
+
+	
+/* contents*/
+#contents {
+	clear: both;
+	margin: 0px;
+	text-align: left;
+	background: #FFFFFF;
+	padding: 0px;
+}
+
+#contents p {
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", "Osaka";
+	font-size: medium;
+	font-style: normal;
+	padding-left: 8px;
+}
+
+.date {
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", "Osaka";
+	font-size: small;
+	font-style: normal;
+	padding-left: 6px;
+	color: #CCCCCC;
+}
+
+
+
+
+/* lecture site */
+.lecture {
+	background-color: #E1FFE1;
+	margin:4px;
+	padding:4px;
+}
+
+.lecture p {
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", "Osaka";
+	font-size: medium;
+	font-style: normal;
+	overflow:hidden;
+	color: #006600;
+}
+
+.lecture h1 {
+	padding:0px;
+	margin:0px;
+	margin-top:4px;
+	margin-bottom:4px;
+	font-size: xx-large;
+	color: #006600;
+}
+
+.lecture h2 {
+	font-size: x-large;
+	margin-top:1em;
+	border-bottom-width: 2px;
+	border-left-width: 16px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #006600;
+	border-right-color: #006600;
+	border-bottom-color: #006600;
+	border-left-color: #006600;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	color: #006600;
+	padding-left: 4px;
+}
+
+.lecture h3 {
+	font-size: large;
+	color: #006600;
+	background-image: url(img/i-arrowGreen.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 18px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.lecture img {
+	float:left;
+}
+
+/* Footer */
+#footer {
+	clear: both;
+	padding: 2px;
+	text-align:right;
+	color: #666666;
+	font-size: small;
+	margin: 0px;
+	background-color: #999999;
+}
+
+
+a:link {
+	color: #0000FF;
+}
+a:visited {
+	color: #6633FF;
+}
+a:hover {
+	color: #FF3300;
+}
+a:active {
+	color: #FF00FF;
+}
+
+
+.clear {clear:both;}
+
+/* kadomaru sidebar */
+.sidebar {
+	width: 280px;
+	padding-bottom: 1px;
+	background-image: url(img/whatsnew2.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	color:#CC0000;
+	margin-top: 1em;
+	margin-right: 0;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+.sidebar h3{
+	height: 24px;
+	margin: 0 0 0.5em;
+	background-image: url(img/whatsnew1.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	text-align: center;
+	color: #FF9900;
+	font-size: 16px;
+}
+
+.sidebar h4 {
+	font-size: medium;
+	padding-left: 10px;
+	margin: 0 0 0.5em;
+	font-size: small;
+}
+	
+.sidebar p {
+	font-size: small;
+	padding-left: 20px;
+	margin: 0 0 1em;
+}
+
+.remark {
+	font-size: x-small;
+}
+
+.gallery {
+	padding: 10px;
+	margin-left: 100px;
+}
+
+.type1 {
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+}
+.type1 th {
+	width: 150px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border: 1px solid #ccc;
+}
+.type1 td {
+	width: 350px;
+	padding: 10px;
+	vertical-align: top;
+	border: 1px solid #ccc;
+	font-size: small;
+}
+
+p {
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", "Osaka";
+	font-size: medium;
+	font-style: normal;
+}
+
+h1 {
+	padding:0px;
+	margin:0px;
+	font-size: large;
+	color: #660000;
+}
+
+ul{
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", "Osaka";
+	font-size: small;
+	font-style: normal;
+	color: #008800;
+	padding: 0 0 0 30px;
+	margine: 0 20 0 0px;
+}
+
+li {
+	padding: 0 0 0 0px;
+	margin: 0 0 0 0px;
+}
+
+
+
+}
