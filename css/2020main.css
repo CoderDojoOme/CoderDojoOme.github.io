@@ -45,7 +45,7 @@
 body {
 	font-family: "メイリオ", "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
 	background-attachment: fixed;
-	background-image: url(img/background.gif);
+	background-image: url(../img/background.gif);
 	background-repeat: repeat;
 	height: auto;
 	text-align: center;
