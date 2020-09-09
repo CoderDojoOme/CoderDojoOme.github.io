@@ -101,6 +101,17 @@ body {
 	float:left;
 }
 
+.limegreen-container ul {
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", "Osaka";
+	font-size: medium;
+	font-style: normal;
+	overflow:hidden;
+	color: #006600;
+	width: 80%;
+	margin-left: 4em;
+}
+
+
 /* Footer */
 #footer {
 	clear: both;
