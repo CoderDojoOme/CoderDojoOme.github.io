@@ -89,12 +89,26 @@ body {
 	text-transform: none;
 	font-size: large;
 	color: #006600;
-	background-image: url(img/i-arrowGreen.gif);
+	background-image: url(../img/i-arrowGreen.gif);
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 18px;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	margin-left:2em;
+	font-weight: bold;
+}
+
+.limegreen-container h4 {
+	text-transform: none;
+	font-size: large;
+	color: #006600;
+	padding-left: 18px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left:2em;
+	font-weight: bold;
+	vertical-align: middle;
 }
 
 .limegreen-container img {

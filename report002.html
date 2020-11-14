@@ -81,6 +81,346 @@
       ５．がぼちゃたちが左右に移動できたら前半は成功。新しくスプライトを用意し、ダウンロードした(splite3)ファイルをスプライトに読み込む。キー操作［←］［→］で動かしてみよう。<br />
       つづきは要望あればまた今度。</p>
 
+    <h2>ステップ１．ジャックオーランターン（かぼちゃ）のアニメを作る</h2>
+    <h3>素材をダウンロードする（https://ichirokano.github.io/oct.zip）</h3>
+    <p>Zipファイルを解凍して４つのファイルを確認する。<br />
+      ・ pumpkin00.png<br />
+      ・ pumpkin01.png<br />
+      ・ pumpkin02.png<br />
+      ・ Snowman.sprite3<br />
+      </p>
+    <p><img src="img/practice/hween01.png"></p>
+  
+    <h3>新しいScratchプロジェクトを「作る」</h3>
+    <p>最初から存在する［スプライト１］は、ゴミ箱アイコンをクリックして削除しておく。</p>
+    <p><img src="img/practice/hween02.png" width="800"></p>
+
+    <h3>１個めの［スプライト］を作る（描く）</h3>
+    <p><img src="img/practice/hween03.png"></p>
+
+    <h3>［スプライト］に［コスチュームをアップロード］を選ぶ</h3>
+    <p><img src="img/practice/hween04.png"></p>
+
+    <h3>ダウンロードした３つの画像を選ぶ</h3>
+    <p><img src="img/practice/hween05.png"></p>
+
+    <h3>コスチュームの整理</h3>
+    <p>１．何も書いていない［コスチューム１］が残っていたら削除する。<br />
+      ２．図のようにコスチュームの順番を入れ替える。</p>
+    <p><img src="img/practice/hween06.png"></p>
+
+    <h3>［スプライト］の名前と大きさを調整</h3>
+    <p>名前は［かぼちゃ］、大きさは［50］%にする。</p>
+    <p><img src="img/practice/hween07.png"></p>
+
+    <h3>［かぼちゃ］にプログラムを書く</h3>
+    <p>１．マウスで［かぼちゃ］を選択する。</p>
+    <p><img src="img/practice/hween08.png"></p>
+
+    <h3>かぼちゃのアニメーションを作る</h3>
+    <p>１．［ブロック定義］を選んで［ブロックを作る］をクリック。</p>
+    <p>２．［ブロック名］は、分かりやすいように［アニメーションする］に書き換える。</p>
+    <p><img src="img/practice/hween09.png"></p>
+
+    <h3>プログラムを作る</h3>
+    <p>［旗が押されたとき］ブロックの次に、［アニメーション］定義ブロックを置く。</p>
+    <p><img src="img/practice/hween10.png"></p>
+
+    <p>［ずっと］ブロックの中に、0.5秒毎にかぼちゃの画像01と02を入れ替えるプログラムを作る。<br />
+      コスチュームの名前が01なら、02の画像にする。01でなければ01の画像にする。</p>
+    <p><img src="img/practice/hween11.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、かぼちゃがアニメーションするか検査する。</p>
+    <p><img src="img/practice/hween12.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>［定義］ブロックを使うと、Scratchには無い、自分のオリジナルブロックを作ることができる。
+          ここでは［かぼちゃがアニメするブロック］ができたね。</h4>
+      </div>
+    </div>
+
+    <h2>ステップ２．かぼちゃを横に５個並べる。</h2>
+
+    <h3>［ステージ］にプログラムを書く</h3>
+    <p>１．［ステージ］を選択する。<br />
+      ２．グローバル変数［glb_X］と［glb_Y］を作る。グローバル変数は全てのスプライトで読める変数です。<br />
+      ３．旗が押されたら、X座標を50ずつずらして［かぼちゃ］を置く。</p>
+    <p><img src="img/practice/hween13.png"></p>
+    <p>４．最初のX座標は-170で、［かぼちゃ］のクローンを作成したらX座標を50ずつ右側にずらす。これを５回繰り返す。</p>
+    <p><img src="img/practice/hween14.png"></p>
+
+    <h3>［かぼちゃ］のプログラムを改造する</h3>
+    <p>１．旗が押されたら、最初のかぼちゃは隠します。<br />
+      ２．［クローン］されたら、かぼちゃを表示します。<br />
+      ３．X座標は、グローバル変数の[glb_X]とします。つまり最初は-170。次が50右。</p>
+    <p><img src="img/practice/hween15.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、かぼちゃがアニメーションするか検査する。</p>
+    <p><img src="img/practice/hween16.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>［クローン］ブロックを使うと、かぼちゃアニメのスプライトを複製することができるのだ。</h4>
+      </div>
+    </div>
+
+    <h2>ステップ３．かぼちゃを縦にも５個並べる。</h2>
+
+    <h3>［ステージ］のプログラムを改造する</h3>
+    <p>１．縦方向にも［５回繰り返す］を追加する。</p>
+    <p><img src="img/practice/hween17.png"></p>
+    <p>２．プログラムはこうなる↓。『横方向[glb_x]を5回繰り返す』というのを、さらに『縦報告[glb_y]も5回繰り返す』。</p>
+    <p><img src="img/practice/hween18.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、かぼちゃが縦横に５個ずつ表示するはず。</p>
+    <p><img src="img/practice/hween19.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>［繰り返し］ブロックを使うと、”横に５回ずつの作業”を、さらに縦にも５回ずつ繰り返し作業して、
+          全部で２５個の作業が簡単にできる。</h4>
+      </div>
+    </div>
+
+    <h2>ステップ４．ステージに背景を描く。</h2>
+
+    <h3>［ステージ］を選んでから、［背景を選ぶ］をクリック</h3>
+    <p>１．背景は、［Stars］を選ぶ<br />
+      ２．［背景１］が残った場合は削除</p>
+    <p><img src="img/practice/hween20.png"></p>
+
+    <h3>［ステージ］の両脇に［かべ］を作るので、新しいスプライトを描く</h3>
+    <p><img src="img/practice/hween21.png"></p>
+
+    <h3>スプライト［かべ］のコスチュームは、下図のように、枠の左右に長方形を２個置く</h3>
+    <p><img src="img/practice/hween22.png"></p>
+
+    <h3>スプライト［かべ］の設定</h3>
+    <p>１．スプライト名を［かべ］にする。<br />
+      ２．大きさを［100］％、Xを［0］、Yも［0］にすると画面の左右にぴったり表示されるはず</p>
+    <p><img src="img/practice/hween23.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>ステージ背景に直接、左右の壁を描かなかった理由は、後で説明します（なぜスプライトでかべを作るのか）</h4>
+      </div>
+    </div>
+
+    <h2>ステップ５．かぼちゃたちに号令を送る「全員～、進め！」</h2>
+
+    <p>ｘ座標を、ずっと+1ずつ変化させると右に進む。</p>
+    <p><img src="img/practice/hween24.png"></p>
+
+    <h3>［かぼちゃ］に自分の場所を覚えてもらう</h3>
+    <p>１．［かぼちゃ］スプライトを選んで、ローカル変数［my_x］と［my_y］を追加する。
+      この時に、［このスプライトのみ］を選ぶこと。これはかぼちゃの現在位置を、かぼちゃ一人一人に覚えてもらうため。</p>
+    <p><img src="img/practice/hween25.png"></p>
+
+    <p>２．ステージのプログラム「縦横に５回ずつ、かぼちゃのクローンを作る」で、[glb_x]と[glb_y]を指定していたが、
+      かぼちゃのローカル変数[my_x], [my_y]に代入してからアニメするように改造する。</p>
+    <p><img src="img/practice/hween26.png"></p>
+
+    <h3>全体をコントロールするので［ステージ］のプログラムを改造する</h3>
+    <p>１．グローバル変数「進む方向」を追加する。変数名は日本語でも良い。
+      ２．ステージのプログラムに、変数ブロックの［＊を＊にする］とイベントブロックの［メッセージ１を送る］を選んで、
+      メッセージ名を［全体～、進め！］に変える。</p>
+    <p><img src="img/practice/hween27.png"></p>
+
+    <h3>［かぼちゃ］のプログラムを改造する</h3>
+    <p>［かぼちゃ］のプログラムに戻って、［全体～、進め！を受け取った時］ブロックを追加する。
+      進めの号令がかかったら、ずっとX座標を+1ずつ変化させて移動する。</p>
+    <p><img src="img/practice/hween28.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、かぼちゃが全員、右に進むはず。</p>
+    <p><img src="img/practice/hween29.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>右に移動するプログラムは１個しか存在しないんだけど、［かぼちゃ］スプライト25個がそれぞれ、
+          クローンされた同じプログラムを持っている。それぞれ異なる座標変数[my_x],[my_y]を持っているので、
+          きちんと整列している。
+          そして、［ステージ］のプログラムが、かぼちゃ25個全部に［進め！］の号令を送って、
+          それぞれがメッセージを受け取ったら、X座標を+1ずつ進めている。
+          </h4>
+      </div>
+    </div>
+
+    <h2>ステップ６．かぼちゃたちが左右の壁で折り返す</h2>
+
+    <p>壁にぶつかったら、［進む方向］を反転してx座標を-1する。</p>
+    <p><img src="img/practice/hween30.png"></p>
+
+    <h3>かぼちゃが左右の壁にあたったらの判定をどこに作る？</h3>
+    <p>１．［かべ］スプライトにプログラムを作る。<br />
+      ２．もしも、左右のどちらでもいいので［かべ］が［かぼちゃ］に触れたら、
+      ［進む方向］を反転する（-1をかける）。進む方向が+1なら-1になって、-1なら+1になる。</p>
+    <p><img src="img/practice/hween31.png"></p>
+
+    <h3>本当にこれだけで動くの？　（プログラムの動作テスト）</h3>
+    <p>旗をクリックして、かぼちゃが全員、左右に動くはず。</p>
+    <p><img src="img/practice/hween32.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>スプライトとスプライトの当たり判定で、動く向きを変えることができた。
+          大人のプログラムが得意な人は、『X座標が230を超えたら右端なので反転しよう、
+          X座標が-230を超えたら左端なので反転しよう』と考えるかも知れないけど、
+          Scratchらしさが楽しめる当たり判定だ。
+          </h4>
+      </div>
+    </div>
+
+    <h2>ステップ７．左右の壁で折り返すときに、一歩前進しよう</h2>
+
+    <p>壁にぶつかったら、Y座標を下側にずらす。</p>
+    <p><img src="img/practice/hween33.png"></p>
+
+    <h3>号令［メッセージ］を送る</h3>
+    <p>［かべ］と［かぼちゃ］が触れたとき、同時にメッセージ［一歩、前に進め！］を送る</p>
+    <p><img src="img/practice/hween34.png"></p>
+
+    <h3>［かぼちゃ］のスプライトに、前に進むプログラムを追加</h3>
+    <p>１．［一歩、前に進め！］を受け取ったら、<br />
+      ２．Y座標を下側に進める（-30を足す）。この時、３歩進むアニメーションを演出したいので、
+      -10ずつにして３回繰り返す。</p>
+    <p><img src="img/practice/hween35.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、かぼちゃが左右に動いて、［かべ］に触れたら前に進むはず。</p>
+    <p><img src="img/practice/hween33.png"></p>
+
+    <h2>ステップ８．雪だるまを追加する</h2>
+
+    <h3>［外部ファイルのスプライト］をアップロードする</h3>
+    <p>１．一番最初にダウンロードした［Snowman.sprite3］を選ぶ。</p>
+    <p><img src="img/practice/hween36.png"></p>
+
+    <h3>ステージのプログラムで雪だるまをクローンするよ</h3>
+    <p>１．ブロックが増えてきたので、［かぼちゃを整列する］定義を分けて、見やすく整理した。<br />
+      ２．［Snowmanのクローンを作る］ブロックを追加した。</p>
+    <p><img src="img/practice/hween37.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>１．旗をクリックして、雪だるまが表示されるのを確認する。<br />
+      ２．キーボード［←］［→］のキーを押してみよう。</p>
+    <p><img src="img/practice/hween38.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>自分で作った［スプライト］は、外部ファイルとして再利用ができる。
+          Scratch画面最下段にある［バックパック］に保存して再利用もできる。          
+          </h4>
+      </div>
+    </div>
+
+    <p><img src="img/practice/hween39.png"></p>
+
+    <h2>ステップ９．雪玉を投げたい？</h2>
+    <p><img src="img/practice/hween40.png"></p>
+
+    <h3>［雪玉］という名前のスプライトを作る</h3>
+    <p>１．新しいスプライトを作って、自分でコスチュームで雪玉を描いてみて。<br />
+      ２．スプライトの名前は［雪玉］ね。</p>
+    <p><img src="img/practice/hween41.png"></p>
+
+    <h3>すでに［雪だるま］スプライトには、プログラムが入っているので確認してください</h3>
+    <p>１．雪だるまが［スペース］キーを押したら、［雪玉］のクローンを作ります。<br />
+      ２．雪だるまの現在位置（X座標）を、グローバル変数［雪玉］に代入します。</p>
+    <p><img src="img/practice/hween42.png"></p>
+
+    <h3>［雪玉］スプライトのプログラムを作る</h3>
+    <p>１．［雪玉］がクローンされたとき。<br />
+      ２．変数［雪玉］には、雪だるまのX座標が入っている。<br />
+      ３．Y座標を上側に向かって変化させる（つまりY座標が170になるまで+5ずつ進む）。</p>
+    <p><img src="img/practice/hween43.png"></p>
+
+    <p>スプライト名［雪玉］と変数［雪玉］を同じ名前にしたの失敗だったな。変数は[雪玉X座標]とかにすれば良かったかな、混乱しないように気を付けてね。</p>
+
+    <h3>［雪玉］が［かぼちゃ］に当たった時</h3>
+    <p>１．「もし［雪玉に触れた］なら」ブロックを追加する<br />
+      ２．メッセージ［当たった］を送る<br />
+      ３．コスチュームをかぼちゃが割れた絵にする。<br />
+      ４．一瞬(0.3秒)待って、このかぼちゃを削除します。</p>
+    <p><img src="img/practice/hween44.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>雪だるまが投げた［雪玉］が［かぼちゃ］に当たったら、
+      ［かぼちゃ］が割れて、かぼちゃも雪玉も消えれば成功。</p>
+    <p><img src="img/practice/hween45.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>かぼちゃの大きさや、雪玉の大きさを小さくすると難易度が高くなるよ。大きいと当たりやすいので簡単になる。</h4>
+      </div>
+    </div>
+
+    <h2>ステップ１０．ここからは自分で考えて作ってみてほしい</h2>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point2.png">
+      <div class="display-4">
+        <h4>ステージ最下段に、スプライト［ゴール］の壁を作る。
+          もしも［かぼちゃ］が［ゴール］に触れたら、ゲームオーバー。
+          </h4>
+      </div>
+    </div>
+
+    <p><img src="img/practice/hween46.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point2.png">
+      <div class="display-4">
+        <h4>［ゴール］がメッセージ［ゲームオーバー］を送ったら、
+          スプライト［ゲームオーバー］を表示する。
+          コスチュームは”ハッピーハロウィーン”だ。          
+          </h4>
+      </div>
+    </div>
+
+    <p><img src="img/practice/hween47.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point2.png">
+      <div class="display-4">
+        <h4>かぼちゃは、ランダムに［タネ］を投げてくるぞ。
+          これは雪だるまが雪玉を投げるのと同じプログラムが参考になる。          
+          </h4>
+      </div>
+    </div>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point2.png">
+      <div class="display-4">
+        <h4>［雪だるま］が［タネ］に触れたら、メッセージ［ゲームオーバー］を送ればいい。
+          ゲームオーバーは、すでに完成しているので。          
+          </h4>
+      </div>
+    </div>
+
+    <h3>完成品</h3>
+    <p>ここまでの完成品は、これだ！<br />
+      （https://scratch.mit.edu/projects/429826071/）
+      </p>
+    <p><img src="img/practice/hween48.png"></p>
+
+
+
+
+
+
 
   </div> <!-- class=limegreen-container（閉じる） -->
 
