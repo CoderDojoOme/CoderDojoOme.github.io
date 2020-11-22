@@ -1,0 +1,258 @@
+﻿<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>開催報告|CoderDojo青梅</title>
+    <meta name="keywords" content="青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
+    <meta name="description" content="Scratchお題『ミサイルコマンド』初心者向けの教材。二次元方程式を使った隕石や花火の移動。何がどうやって動くのか全体や先の行動を考えてプログラムを組んでいくロジックを考える。">
+    <link rel="stylesheet" href="css/2020main.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS 
+    <link href="css/style.css" rel="stylesheet">-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#" style="padding:0; padding-left:1em; margin:0;">
+      <img src="img/cdome48px.png" height="48px" alt=""></a>
+    <a class="navbar-brand" href="index.html">CoderDojo 青梅</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">ホーム</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">CoderDojoについて</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schedule.html">開催予定と申込</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="report.html">開催報告</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">お問合せ</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>  
+  
+<div class="white-container">
+
+  <div class="limegreen-container">
+
+    <h1>開催報告</h1>
+
+    <h2>Scratchお題『ミサイルコマンド』</h2>
+    <p>Scratchプログラミング初心者向けの教材。二次元方程式を使った隕石や花火の移動。何がどうやって動くのか全体や先の行動を考えてプログラムを組んでいくロジックを考える。</p>
+    <p><img src="img/practice2/mcmd01.png"></p>
+    <p>体験できること<br />
+      ■　なぜ学校で方程式を学ぶのか。<br />
+      ■　ロジックを考える。<br />
+      何がどうやって動くのか全体や先の行動を考えて、プログラムを組んでいく。<br />
+      1. マウスを押したら、発射台から[花火玉]を打ち上げる<br />↓<br />
+      2. [花火玉]が目的の場所まで打ち上ったら爆発する<br />↓<br />
+      3. [隕石]が落ちてくる<br />↓<br />
+      4. [花火玉]と[隕石]がぶつかる<br />↓<br />
+      5. [隕石]が破壊される<br />↓<br />
+      6. [発射台]と[隕石]がぶつかる<br />↓<br />
+      7. [発射台]が壊れてゲームオーバー
+    </p>
+
+    <h2>ステップ１．花火玉と発射台を作る</h2>
+    <h3>新しいScratchプロジェクトを「作る」</h3>
+    <p>最初から存在する［スプライト１］を選び、設定を変更する。</p>
+    <p><img src="img/practice/hween02.png" width="800"></p>
+  
+    <h3>新しいスプライト「発射台」を作る</h3>
+    <p>１）スプライトの名前を「発射台」に変える。<br />
+      ２）新しいコスチュームを選ぶ（カニを選んだ）。<br />
+      ３）最初から存在するコスチュームのネコは消しておく。<br />
+      ４）「発射台」の大きさは[50]%、X座標は[0]、Y座標は[-170]にする。
+      </p>
+    <p><img src="img/practice2/mcmd02.png" width="800"></p>
+
+    <h3>新しいスプライト「花火玉」を作る（大きさ[40]%）</h3>
+    <p><img src="img/practice2/mcmd03.png"></p>
+    <p>新しい変数を作る（［このスプライトのみ］を選ぶこと）<br />
+      １）スタートX<br />
+      ２）スタートY<br />
+      ３）目標地点X<br />
+      ４）目標地点Y<br />
+      ５）現在位置X<br />
+      ６）現在位置Y
+      </p>
+    <p><img src="img/practice2/mcmd04.png"></p>
+
+    <h3>スプライト「花火玉」がクローンされたときのプログラムを書く</h3>
+    <p>花火玉が、どこから発射し、どこへ向かうのか、移動ルートを初期設定する。</p>
+    <p><img src="img/practice2/mcmd05.png" width="800"></p>
+
+    <h3>スプライト「花火玉」の現在位置X、Yを計算する</h3>
+    <p>１）２点を通る直線の方程式は、下記である。</p>
+    <p><img src="img/practice2/mcmd06.png" width="500"></p>
+    <p>２）変数［現在位置Y］は「発射台」の[-170]から画面上に向かって[2]ずつ加算させればいい。ここでの[2]は移動距離であり[1]ならゆっくり、[3]なら早く移動できるスピードとなる。<br />
+      ３）変数［現在位置X］を方程式から計算する。</p>
+    <p><img src="img/practice2/mcmd07.png" width="400"></p>
+    <p>これをScratchの変数に置き換えると、下記になる。</p>
+    <p><img src="img/practice2/mcmd08.png" width="700"></p>
+    <p>スプライト「花火玉」のプログラムの続きを書く。</p>
+    <p><img src="img/practice2/mcmd09.png"></p>
+
+    <h3>ステージに「花火玉」を打ち上げるプログラムを書く</h3>
+    <p>ステージ［背景］を選んで、コードにマウスが押された場所に向かって花火玉のクローンを作る。</p>
+    <p><img src="img/practice2/mcmd10.png"></p>
+    <p>マウスが押されたまま、何度もクローンが作成されてしまう場合、マウスが押されない状態まで待つブロックを追加する（マウスを押しっぱなしで、連続して花火玉を打ち上げるのも楽しいよ）。</p>
+    <p><img src="img/practice2/mcmd11.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、マウスをクリックして花火玉が打ち上ることを検査する。検査できたら、画面に表示されている変数は非表示にする。</p>
+    <p><img src="img/practice2/mcmd12.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point.png">
+      <div class="display-4">
+        <h4>頭の中だけで考えるよりも、学校で学んだ知識でノートに書いてからプログラムの式を作る方が効率いい場合があるぞ（余計な変数や計算を減らせるかも）。</h4>
+      </div>
+    </div>
+    <p><img src="img/practice2/mcmd13.png"></p>
+
+    <h2>ステップ２．花火玉を爆発させる</h2>
+
+    <h3>スプライト「花火玉」の初期設定を追加</h3>
+    <p>１）大きさを[20]%にする<br />
+      ２）コスチュームを[ball-a]にする</p>
+    <h3>スプライト「花火玉」が、目標地点に到着した後、爆発させるプログラムを追加</h3>
+    <p>３）コスチュームを[ball-c]にする<br />
+      ４）大きさを[20]ずつ変えるを、[10]回繰り返す（大きくなる時は早く）。<br />
+      ５）大きさを[-5]ずつ変えるを、[40]回繰り返す（小さくなる時は遅く）。</p>
+    <p><img src="img/practice2/mcmd14.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、マウスをクリックして花火玉が爆発することを検査する。</p>
+    <p><img src="img/practice2/mcmd15.png"></p>
+    <p>「幽霊」の効果を追加すると、徐々に透明にすることができる。</p>
+    <p><img src="img/practice2/mcmd16.png"></p>
+
+    <h2>ステップ３．隕石を落下させる</h2>
+
+    <h3>宇宙から隕石が落下してくる</h3>
+    <p>隕石は、２点を決めて直線を移動する。花火玉の反対方向なので、スプライトを複製してプログラムを改造すると効率がいい。</p>
+    <p><img src="img/practice2/mcmd17.png"></p>
+    <p>１）スプライト「花火玉」を複製して、新しいスプライト名を「隕石」にする。<br />
+      ２）スプライトのコスチューム「Ball-a～Ball-e」は全て削除して「スイカ」を追加する。</p>
+    <p><img src="img/practice2/mcmd18.png"></p>
+
+    <h3>スプライト「隕石」が落下するプログラムを書く</h3>
+    <p>１）スタートする場所は、Y座標が画面最上段、X座標は乱数で決める。<br />
+      ２）目標地点は、Y座標が画面最下段、X座標は乱数で決める。<br />
+      ３）現在位置の計算は変更なし。<br />
+      ４）どこからどこまでの繰り返し条件が変わるから気を付けてね。</p>
+    <p><img src="img/practice2/mcmd19.png" width="800"></p>
+
+    <h3>ランダムな時間間隔で隕石のクローンを作る</h3>
+    <p>ステージのコードを改造する。[1～30]までの乱数で、[１]が出たときだけクローンを作る。[～30]までの値は調整してね。</p>
+    <p><img src="img/practice2/mcmd20.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、ときどき、隕石（スイカ）が落下してくることを確認する。</p>
+    <p><img src="img/practice2/mcmd21.png"></p>
+
+    <h2>ステップ４．花火で、隕石を破壊する</h2>
+
+    <h3>「隕石」のプログラムを改造する</h3>
+    <p>１）もし「花火玉」に触れたら、[0.5]秒間、半分になったスイカを表示して「隕石」を消す。</p>
+    <p><img src="img/practice2/mcmd22.png"></p>
+
+    <h3>プログラムの動作テスト</h3>
+    <p>旗をクリックして、花火玉を打ち上げて隕石を破壊できることを確認する。</p>
+    <p><img src="img/practice2/mcmd23.png"></p>
+
+    <h2>ステップ５．ここからは自分で考えて作ってみてほしい</h2>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point2.png">
+      <div class="display-4">
+        <h4>「隕石」が「発射台」に触れたら、ゲームオーバーにする</h4>
+      </div>
+    </div>
+    <p><img src="img/practice2/mcmd24.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point2.png">
+      <div class="display-4">
+        <h4>「発射台」が左右キーで移動できるようにする</h4>
+      </div>
+    </div>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point2.png">
+      <div class="display-4">
+        <h4>１）うじゃうじゃ動き回る「子ガニ達」をつくる<br />
+          ２）「隕石」が「子ガニ達」にぶつかったら「子ガニ達」を消す</h4>
+      </div>
+    </div>
+    <p><img src="img/practice2/mcmd25.png"></p>
+
+    <div class="media position-relative" style="margin: 5em;">
+      <img src="img/practice/point2.png">
+      <div class="display-4">
+        <h4>「隕石」の破壊に成功したら、変数［得点］を１ずつ増える。
+          「子ガニ達」が消えると、変数［ライフ］が１ずつ減る。</h4>
+      </div>
+    </div>
+    <p><img src="img/practice2/mcmd26.png"></p>
+
+    <h3>完成品</h3>
+    <p>ここまでの完成品は、これだ！<br />
+      （<a href="https://scratch.mit.edu/projects/422721526/" target="_blank">https://scratch.mit.edu/projects/422721526/</a>）
+      </p>
+    <p><img src="img/practice2/mcmd27.png"></p>
+
+
+
+
+
+
+
+  </div> <!-- class=limegreen-container（閉じる） -->
+
+  <!-- footer section -->
+  <hr class="geekhr" />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- My Footer -->
+    <div id="footer">Copyright &copy; 2020 CoderDojo OME, Tokyo @ City Welfare Council</div>
+  </div> <!-- id=white-container（閉じる） -->
+</body>
+</html>
