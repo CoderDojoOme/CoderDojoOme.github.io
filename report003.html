@@ -88,7 +88,7 @@
     <h2>ステップ１．花火玉と発射台を作る</h2>
     <h3>新しいScratchプロジェクトを「作る」</h3>
     <p>最初から存在する［スプライト１］を選び、設定を変更する。</p>
-    <p><img src="img/practice/hween02.png" width="800"></p>
+    <p><img src="img/practice/hween02.png" width="800" class="img-fluid"></p>
   
     <h3>新しいスプライト「発射台」を作る</h3>
     <p>１）スプライトの名前を「発射台」に変える。<br />
@@ -96,7 +96,7 @@
       ３）最初から存在するコスチュームのネコは消しておく。<br />
       ４）「発射台」の大きさは[50]%、X座標は[0]、Y座標は[-170]にする。
       </p>
-    <p><img src="img/practice2/mcmd02.png" width="800"></p>
+    <p><img src="img/practice2/mcmd02.png" width="800" class="img-fluid"></p>
 
     <h3>新しいスプライト「花火玉」を作る（大きさ[40]%）</h3>
     <p><img src="img/practice2/mcmd03.png"></p>
@@ -108,11 +108,11 @@
       ５）現在位置X<br />
       ６）現在位置Y
       </p>
-    <p><img src="img/practice2/mcmd04.png"></p>
+    <p><img src="img/practice2/mcmd04.png" class="img-fluid" alt="ミサイルコマンド"></p>
 
     <h3>スプライト「花火玉」がクローンされたときのプログラムを書く</h3>
     <p>花火玉が、どこから発射し、どこへ向かうのか、移動ルートを初期設定する。</p>
-    <p><img src="img/practice2/mcmd05.png" width="800"></p>
+    <p><img src="img/practice2/mcmd05.png" class="img-fluid"></p>
 
     <h3>スプライト「花火玉」の現在位置X、Yを計算する</h3>
     <p>１）２点を通る直線の方程式は、下記である。</p>
@@ -123,17 +123,17 @@
     <p>これをScratchの変数に置き換えると、下記になる。</p>
     <p><img src="img/practice2/mcmd08.png" width="700"></p>
     <p>スプライト「花火玉」のプログラムの続きを書く。</p>
-    <p><img src="img/practice2/mcmd09.png"></p>
+    <p><img src="img/practice2/mcmd09.png" class="img-fluid"></p>
 
     <h3>ステージに「花火玉」を打ち上げるプログラムを書く</h3>
     <p>ステージ［背景］を選んで、コードにマウスが押された場所に向かって花火玉のクローンを作る。</p>
-    <p><img src="img/practice2/mcmd10.png"></p>
+    <p><img src="img/practice2/mcmd10.png" class="img-fluid"></p>
     <p>マウスが押されたまま、何度もクローンが作成されてしまう場合、マウスが押されない状態まで待つブロックを追加する（マウスを押しっぱなしで、連続して花火玉を打ち上げるのも楽しいよ）。</p>
     <p><img src="img/practice2/mcmd11.png"></p>
 
     <h3>プログラムの動作テスト</h3>
     <p>旗をクリックして、マウスをクリックして花火玉が打ち上ることを検査する。検査できたら、画面に表示されている変数は非表示にする。</p>
-    <p><img src="img/practice2/mcmd12.png"></p>
+    <p><img src="img/practice2/mcmd12.png" class="img-fluid"></p>
 
     <div class="media position-relative" style="margin: 5em;">
       <img src="img/practice/point.png">
@@ -152,7 +152,7 @@
     <p>３）コスチュームを[ball-c]にする<br />
       ４）大きさを[20]ずつ変えるを、[10]回繰り返す（大きくなる時は早く）。<br />
       ５）大きさを[-5]ずつ変えるを、[40]回繰り返す（小さくなる時は遅く）。</p>
-    <p><img src="img/practice2/mcmd14.png"></p>
+    <p><img src="img/practice2/mcmd14.png" class="img-fluid"></p>
 
     <h3>プログラムの動作テスト</h3>
     <p>旗をクリックして、マウスをクリックして花火玉が爆発することを検査する。</p>
@@ -164,7 +164,7 @@
 
     <h3>宇宙から隕石が落下してくる</h3>
     <p>隕石は、２点を決めて直線を移動する。花火玉の反対方向なので、スプライトを複製してプログラムを改造すると効率がいい。</p>
-    <p><img src="img/practice2/mcmd17.png"></p>
+    <p><img src="img/practice2/mcmd17.png" class="img-fluid"></p>
     <p>１）スプライト「花火玉」を複製して、新しいスプライト名を「隕石」にする。<br />
       ２）スプライトのコスチューム「Ball-a～Ball-e」は全て削除して「スイカ」を追加する。</p>
     <p><img src="img/practice2/mcmd18.png"></p>
@@ -174,11 +174,11 @@
       ２）目標地点は、Y座標が画面最下段、X座標は乱数で決める。<br />
       ３）現在位置の計算は変更なし。<br />
       ４）どこからどこまでの繰り返し条件が変わるから気を付けてね。</p>
-    <p><img src="img/practice2/mcmd19.png" width="800"></p>
+    <p><img src="img/practice2/mcmd19.png" width="800" class="img-fluid"></p>
 
     <h3>ランダムな時間間隔で隕石のクローンを作る</h3>
     <p>ステージのコードを改造する。[1～30]までの乱数で、[１]が出たときだけクローンを作る。[～30]までの値は調整してね。</p>
-    <p><img src="img/practice2/mcmd20.png"></p>
+    <p><img src="img/practice2/mcmd20.png" class="img-fluid"></p>
 
     <h3>プログラムの動作テスト</h3>
     <p>旗をクリックして、ときどき、隕石（スイカ）が落下してくることを確認する。</p>
@@ -252,7 +252,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- My Footer -->
-    <div id="footer">Copyright &copy; 2020 CoderDojo OME, Tokyo @ City Welfare Council</div>
+    <div id="footer">Copyright &copy; 2021 CoderDojo OME, Tokyo @ City Welfare Council</div>
   </div> <!-- id=white-container（閉じる） -->
 </body>
 </html>
