@@ -1,0 +1,153 @@
+﻿<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>開催報告|CoderDojo青梅</title>
+    <meta name="keywords" content="青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
+    <meta name="description" content="CoderDojo青梅「子どもたちのための無料プログラミング倶楽部」オンライン開催しました（2021年04月11日）。">
+    <link rel="stylesheet" href="../css/2020main.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS 
+    <link href="css/style.css" rel="stylesheet">-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#" style="padding:0; padding-left:1em; margin:0;">
+      <img src="../img/cdome48px.png" height="48px" alt=""></a>
+    <a class="navbar-brand" href="../index.html">CoderDojo 青梅</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">ホーム</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../aboutus.html">CoderDojoについて</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../schedule.html">開催予定と申込</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../report.html">開催報告</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact.html">お問合せ</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>  
+  
+<div class="white-container">
+
+  <div class="limegreen-container">
+
+    <h1>第5回オンライン開催報告</h1>
+
+    <h2>本日のScratchテーマは「ブロック崩し」を作ってみるよ</h2>
+    <p>2021-05-02</p>
+    <p>ゴールデンウィーク臨時会を開催。募集期間が短かったけれど、ニンジャ２名が参加してくれました。スクラッチのプログラミングで知っていると便利な機能に空間座標があります。マイナスの座標は中学校で学ぶのですが、今日は思い切ってX座標、Y座標を使ってみる事にしました。「ところで座標って知ってたりしますか」という質問してみたところ、スクラッチの本を読んで少しやったことあるとの事なので、学校で教わる前に体験として知っておくのもアリなのかなと思いました。</p>
+    <p><img src="img/practice3/d0502-a.png" class="img-fluid" alt="Scratchプログラミングワークショップ"></p>
+    <h3>スクラッチ完成品はこちら</h3>
+    <p><a href="https://scratch.mit.edu/projects/524136593/fullscreen/" class="btn btn-success" target="_blank">Scratch「ブロック崩し」</a></p>
+    <h3>「ブロック」を並べます</h3>
+    <p>X座標はヨコの位置だよ。真ん中がゼロ”０”、右側に進むと１，２，３，４と増えていきます。真ん中から左側に進むとマイナス１、マイナス２、マイナス３と変わっていきます。</p>
+    <p>Y座標はタテの位置だよ。真ん中がゼロ”０”、上に進むと１，２，３。真ん中から下に進むとマイナス１、マイナス２、マイナス３。</p>
+    <p><img src="img/practice3/d0502-b.png" class="img-fluid" alt="Scratch X座標とY座標"></p>
+    <p>「スタートの旗」を押して最初にやることは、ステージ画面の左上に１つめのブロックを置くコトです。</p>
+    <p>X座標は[-200]、Y座標は[120]にしてみます。</p>
+    <p><img src="img/practice3/d0502-d.png" class="img-fluid" alt="Scratch 最初のブロックを置きます"></p>
+    <p>「クローン」って知っているかな、スプライトをコピーする機能です。「クローンを作る」「クローンされたとき」「クローンを削除する」の３つを使います。</p>
+    <p><img src="img/practice3/d0502-e.png" class="img-fluid" alt="Scratch クローン"></p>
+    <p>１つめのブロックのクローンを作ります。次にX座標を右側に変えます。これを７回繰り返してみましょう。ブロックが重なったりする場合は、移動する数字を大きくしたり小さくしてみましょう。</p>
+    <p><img src="img/practice3/d0502-c.png" class="img-fluid" alt="Scratch ブロックを横に並べる"></p>
+    <h3>「ボール」を作ります</h3>
+    <p>スプライトの名前は「ボール」に変えると後で便利。ステージ画面の真ん中（X座標＝0, Y座標=0）が最初の位置。そしてボールの向きを下、少し斜めに向けて、ずーっと10歩動かします。画面端に着いたら跳ね返るようにします。</p>
+    <p><img src="img/practice3/d0502-f.png" class="img-fluid" alt="Scratch ボールを動かす"></p>
+    <p>動作を試そう。旗を押してスタート。</p>
+    <p><img src="img/practice3/d0502-g.png" class="img-fluid" alt="Scratch ボールを動かす"></p>
+    <h3>「ラケット」を作ります</h3>
+    <p>スプライトの名前を「ラケット」に変えます。キーボードの矢印「みぎ」が押されたら、90度（右）に動かします。左はその反対ね。</p>
+    <p><img src="img/practice3/d0502-h.png" class="img-fluid" alt="Scratch ラケットを動かす"></p>
+    <p>動作を試そう。旗を押してスタート。</p>
+    <p><img src="img/practice3/d0502-i.png" class="img-fluid" alt="Scratch ラケットを動かす"></p>
+    <h3>「ボール」を打ち返そう</h3>
+    <p>「ボール」が「ラケット」に当たったら跳ね返るので、「ボール」のプログラムを改造します。ボールが、もしラケットに触れたら向きを反対にします。ここは下図のままコードを組み立ててください。</p>
+    <p><img src="img/practice3/d0502-j.png" class="img-fluid" alt="Scratch ボールをラケットで打ち返す"></p>
+    <p>動作を試そう。旗を押してスタート。</p>
+    <p><img src="img/practice3/d0502-k.png" class="img-fluid" alt="Scratch ボールをラケットで打ち返す"></p>
+    <h3>ここまでの完成形</h3>
+    <p>次は何をしたらいいかな？</p>
+    <p><img src="img/practice3/d0501-n.gif" class="img-fluid" alt="Scratch ブロック崩し"></p>
+    <p>「ブロック」が「ボール」に当たったら「ブロック」を消すように改造してみよう。「ブロック」が消えるので「ブロック」のプログラムを改造します。</p>
+    <p><img src="img/practice3/d0501-o.png" class="img-fluid" alt="Scratch ボールに触れたらブロックを消す"></p>
+    <p>動作を試そう。旗を押してスタート。</p>
+    <p><img src="img/practice3/d0502-p.png" class="img-fluid" alt="Scratch ボールに触れたらブロックを消す"></p>
+    <p>「ブロック」をタテにも並べてみよう。これで「ブロック崩し」ゲームは完成。もっと改造するアイディアがひらめくまで少し遊んでみよう。何が足りないかな？</p>
+    <p><img src="img/practice3/d0502-q.png" class="img-fluid" alt="Scratch ブロック崩し"></p>
+    <h3>改造のアイディア</h3>
+    <li>音を鳴らそう。ブロックを消した時の音。ラケットで打ち返した時の音。</li>
+    <li>得点を数えて表示するのもいいね。</li>
+    <li>全てのブロックを消したらステージクリア。また新しく並べなおす。</li>
+    <li>ゲームオーバーを作るか。ラケットで打ち返せなかった時に失敗だね。</li>
+    <h3>「得点」を追加する</h3>
+    <p>「ブロック」のプログラムを改造するね。旗が押されたときの初期設定。</p>
+    <p>「ブロック」を並べるイベントの開始は、旗じゃなくて「ステージクリア」のメッセージを受け取った時にしよう</p>
+    <p>「得点」変数と「残りブロック」変数を追加してみた。</p>
+    <p><img src="img/practice3/d0502-r.png" class="img-fluid" alt="Scratch ブロック崩し"></p>
+    <p>続けて「ラケット」のプログラムを改造するよ。</p>
+    <p>旗が押されたときの初期設定だ。得点をゼロにして、残りブロックをブロックの数に合わせる。</p>
+    <p>もし「残りブロック」変数がゼロ(0)になったらステージクリアだよ。</p>
+    <p><img src="img/practice3/d0502-s.png" class="img-fluid" alt="Scratch ブロック崩し"></p>
+    <h3>「ゲームオーバー」を追加する</h3>
+    <p>「地面」と「ゲームオーバー」のスプライトを追加したよ。</p>
+    <p>「ボール」のプログラムに、「ボール」がもし「地面」に触れたら「ゲームオーバー」メッセージを送る。</p>
+    <p><img src="img/practice3/d0502-t.png" class="img-fluid" alt="Scratch ブロック崩し"></p>
+    <p>「ゲームオーバー」のプログラムには、「ゲームオーバー」メッセージを受け取ったら表示する。</p>
+    <p><img src="img/practice3/d0502-u.png" class="img-fluid" alt="Scratch ブロック崩し"></p>
+    <h3>「ブロック崩し」ゲームでした</h3>
+    <p>あとは自分でいろいろと改造してみてねー。</p>
+    <p><img src="img/practice3/d0501-m.gif" class="img-fluid" alt="Scratch ブロック崩し"></p>
+    <p>ばいばーい</p>
+    <p><img src="img/practice3/d0502-v.png" class="img-fluid" alt="CoderDojo青梅 ばいばーい"></p>
+
+  </div> <!-- class=limegreen-container（閉じる） -->
+
+  <!-- footer section -->
+  <hr class="geekhr" />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- My Footer -->
+    <div id="footer">Copyright &copy; 2021 CoderDojo OME, Tokyo @ City Welfare Council</div>
+  </div> <!-- id=white-container（閉じる） -->
+</body>
+</html>
