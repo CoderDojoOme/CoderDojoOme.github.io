@@ -63,6 +63,7 @@
   </nav>
 </header>  
   
+<!--<div class="container-sm">-->
 <div class="white-container">
 
   <div class="limegreen-container">
@@ -111,7 +112,7 @@
           <h1>「CoderDojo 青梅」何ができるの？</h1>
 
           <div class="row">
-            <img src="img/recruit.png" alt="ボランティア募集！" class="rounded mx-auto d-block"></div>
+            <p><img src="img/recruit.png" alt="ボランティア募集！" class="img-fluid"></p></div>
       
           <h2>CoderDojo 青梅とは？</h2>
           <div class="row">
@@ -172,14 +173,14 @@
           <h2>プログラミング対象</h2>
           <p>Scratchほか、何でもOK（micro:bit、ラズパイ、WEBサイト制作、python 等）</p>
           <p>▼Scratch</p>
-          <p><img src="img/scratch.png" alt="Scratch"></p>
+          <p><img src="img/scratch.png" class="img-fluid" alt="Scratch"></p>
           <p>▼micro:bit</p>
-          <p><img src="img/microbit.png" alt="micro:bit"></p>
+          <p><img src="img/microbit.png" class="img-fluid" alt="micro:bit"></p>
       
           <h2>開催方法</h2>
           <p>今後の企画・運営を計画しています。新型コロナ感染対策のため人数を減らしての開催やオンラインでの開催(zoom利用)を検討します。
           ボランティアおよび参加したい子どもを募集しています。開催日はご希望に合わせて調整します。</p>
-          <p><img src="img/meet_online.png" alt="オンライン開催"></p>
+          <p><img src="img/meet_online.png" class="img-fluid" alt="オンライン開催"></p>
       
 
     <!-- 目次カード -->
@@ -210,13 +211,17 @@
     </div> <!-- 目次カード（閉じる） -->
 
     <!-- 動画プロモーション -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/J801-zeVCao?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="card-columns">
+      <div class="card shadow-sm bg-white youtube_frame">
+        <iframe src="https://www.youtube.com/embed/J801-zeVCao?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
 
     <!-- カレンダー
     <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=Y19jbGFzc3Jvb21iNWFiZGQwNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%230047a8&amp;showTitle=1&amp;showDate=1&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=1&amp;showTz=0&amp;title=CoderDojo%E9%9D%92%E6%A2%85%E3%81%AE%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" style="border:solid 1px #777" width="400" height="300" frameborder="0" scrolling="no"></iframe>
        -->
        
-  </div> <!-- class=limegreen-container（閉じる） -->
+  </div>  <!-- class=limegreen-container（閉じる） -->
 
   <!-- footer section -->
   <hr class="geekhr" />
@@ -278,6 +283,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- My Footer -->
     <div id="footer">Copyright &copy; 2021 CoderDojo OME, Tokyo @ City Welfare Council</div>
-  </div> <!-- id=white-container（閉じる） -->
+  </div>  <!-- id=white-container（閉じる） -->
 </body>
 </html>
