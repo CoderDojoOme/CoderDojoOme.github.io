@@ -67,7 +67,7 @@ a:focus {
 }
 .navbar-brand {
   height: 40px;
-  padding: 5px 15px;
+  padding: 5px 5px;
   font-size: 18px;
   line-height: 1em;
 }
@@ -100,7 +100,7 @@ a:focus {
 }
 
 .navbar-custom.top-nav-collapse ul.nav li a {
-	    -webkit-transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 	color: #fff;
