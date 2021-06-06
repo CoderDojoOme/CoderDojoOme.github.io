@@ -42,7 +42,7 @@ p.lead {
 }
 
 a {
-    color: #28c3ab;
+    color: #284cc3;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -51,7 +51,8 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #176e61;
+    color: #8e30c5;
+    font-weight: bold;
 }
 
 
@@ -101,6 +102,12 @@ a:focus {
 	background-color: #b6b6b6;
 }
 
+.limegreen-container p {
+    margin: 0 0 20px;
+    padding: 4px;
+    font-size: 16px;
+    line-height: 1.6em;
+}
 
 .limegreen-container h1 {
 	text-transform: none;
@@ -138,10 +145,10 @@ a:focus {
 	background-image: url(../img/i-arrowGreen.gif);
 	background-repeat: no-repeat;
 	background-position: left center;
-	padding-left: 18px;
+	padding-left: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	margin-left:2em;
+	margin-left:1em;
 	font-weight: bold;
 }
 
