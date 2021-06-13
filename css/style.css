@@ -52,9 +52,12 @@ a:hover,
 a:focus {
     text-decoration: none;
     color: #8e30c5;
-    font-weight: bold;
 }
 
+
+.limegreen-container a:hover, a:focus {
+    text-decoration: underline;
+}
 
 .jumbotron-extend {
     position: relative;
