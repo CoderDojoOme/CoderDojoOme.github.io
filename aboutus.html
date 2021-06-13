@@ -32,37 +32,13 @@
   
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
   
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/">
-      <img src="img/cdome48px.png" height="48px" alt="CoderDojo青梅ロゴ">CoderDojo 青梅</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">ホーム</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="aboutus.html">CoderDojoについて</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="schedule.html">開催予定と申込</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="report.html">開催報告</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">お問合せ</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>  
+  <div id="commonHeader"></div>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-12">
   
-<div class="container-sm">
-  <div class="limegreen-container">
+    <div class="container-sm">
+    <div class="limegreen-container">
 
     <h1>CoderDojo について</h1>
     <p><img src="img/meetroom.png"></p>
@@ -110,16 +86,25 @@
   <hr class="geekhr" />
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- My Header and Footer -->
+    <script>
+    $(function() {
+      $("#commonHeader").load("header.html");
+      $("#commonFooter").load("footer.html");
+    });
+    </script>
 
     <!-- My Footer -->
-    <div class="footer">
-      <span class="text-muted">Copyright &copy; 2021 CoderDojo OME, Tokyo @ City Welfare Council</span>
-  </div>
+    <div id="commonFooter"></div>
 
 </div> <!-- <limegreen-container -->
 </div> <!-- <container-sm> -->
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
