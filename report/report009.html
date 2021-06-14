@@ -10,15 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>開催報告|CoderDojo青梅</title>
-    <meta name="keywords" content="Scratch, スクラッチアートと自動運転, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
+    <meta name="keywords" content="Scratch, 100マス計算, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
     <meta name="description" content="CoderDojo青梅「子どもたちのための無料プログラミング倶楽部」オンライン開催しました（2021年05月09日）。「スクラッチアートと自動運転」の作り方">
-    <link rel="stylesheet" href="../css/2020main.css">
     <!-- favicon -->
-    <link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="icon" href="../favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 
-    <!-- Squad theme CSS 
-    <link href="css/style.css" rel="stylesheet">-->
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
@@ -32,120 +31,106 @@
   </head>
   
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-  
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#" style="padding:0; padding-left:1em; margin:0;">
-      <img src="../img/cdome48px.png" height="48px" alt=""></a>
-    <a class="navbar-brand" href="../index.html">CoderDojo 青梅</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">ホーム</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../aboutus.html">CoderDojoについて</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../schedule.html">開催予定と申込</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="../report.html">開催報告</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../contact.html">お問合せ</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>  
-  
-<div class="white-container">
 
-  <div class="limegreen-container">
+<!-- 共通ヘッダーとHTMLコンテナ -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-12">
+      <div class="container-sm">
+        <div class="limegreen-container">
+<!-- 以下コンテンツ -->
 
-    <h2>第6回オンライン開催報告（2021-05-09）</h2>
 
-    <h1>本日のScratchテーマは「スクラッチアートと自動運転」を作ってみるよ</h1>
-    <p>ニンジャ３家族と作品制作するメンター３名が参加してくれました。Scratchじゃない方の「スクラッチアート」を使っためいろを自動脱出する自動運転アルゴリズムをみんなで体験しました。最終成果物は伝えずに、最初はたくさんの同じプログラムを組んで苦労しておき、次に自動化するためのアルゴリズムでプログラムで組んでみて、「おおー、こんな簡単にできるんだ」という体験をしました。では、その模様を以下にお伝えします。</p>
-    <h2>本日の流れ</h2>
-    <ul>
-    <li>1. スクラッチアートを描く</li>
-    <li>2. 自動運転（手動でプログラミング）</li>
-    <li>3. 自動運転（自動化アルゴリズム）</li>
-    </ul>
-    <h2>前半のワークショップ</h2>
-    <p><img src="img/practice4/e0509-0.png" class="img-fluid" alt="前半でやること（じゅんび）"></p>
-    <h2>スクラッチアートとは？</h2>
-    <p>クレヨンを使って、カラフルな模様を書いたその上から真っ黒に塗りつぶして、つまようじ等をつかってカリカリと模様を描くやつですね。これをScratchで描く。</p>
-    <p><img src="img/practice4/e0509-a.png" class="img-fluid" alt="スクラッチアート"></p>
-    <h2>（１）ステージ</h2>
-    <p>ステージ（背景）に、筆の太さ[100]で、様々な色使いで好きな模様を描きます。デタラメでもいいし、水玉とか、何でもいいです。</p>
-    <p><img src="img/practice4/e0509-b.png" class="img-fluid" alt="スクラッチアート"></p>
-    <h2>（２）スプライト（めいろを描く）</h2>
-    <p>最初にある「ネコ」のスプライトは消して、新しく自分で描くスプライトを追加します。</p>
-    <p>先ほどの筆の太さ[100]のまま画面全体を黒色で埋めてください。次に、消しゴムの太さ[100]で迷路を描きます。迷路は太めの方が良いです。</p>
-    <p><img src="img/practice4/e0509-c.png" class="img-fluid" alt="スクラッチアート"></p>
-    <h3>確認</h3>
-    <p>もしも、迷路の枠（スプライト）とステージ（背景）がズレてしまう場合は、スプライトのX座標、Y座標がステージの真ん中にくるように設定しよう。</p>
-    <p><img src="img/practice4/e0509-d.png" class="img-fluid" alt="スクラッチアート"></p>
-    <h2>ワークショップの時間</h2>
-    <p>メンター「それでは作業を始めてください。完成したら作品を見せてくださいね。操作が分からない場合はメンターに聞いてください。」</p>
-    <p><img src="img/practice4/e0509-e.png" class="img-fluid" alt="スクラッチアート"></p>
-    <h2>（３）スプライト（手動でプログラミングする）</h2>
-    <p>迷路のスタートからゴールまで移動するプログラムを作ります。空からながめるのでスプライトは「人の、上から見たやつ」がいいですね。</p>
-    <p>迷路の太さに合わせたいので、スプライトの大きさは[30]に設定します。</p>
-    <p>スタート地点を決めて、旗を押したら「人」が進み、曲がって、進み、曲がって、を繰り返してゴールを目指しましょう。</p>
-    <p><img src="img/practice4/e0509-f.png" class="img-fluid" alt="スクラッチアート"></p>
-    <h2>ワークショップの時間</h2>
-    <p>メンター「それでは作業を始めてください。完成したら、自動運転するアニメーションを発表してください。」</p>
-    <p><img src="img/practice4/e0509-g.png" class="img-fluid" alt="スクラッチアート"></p>
-    <h2>後半のワークショップ</h2>
-    <p>メンター「次に、新しい迷路を描いて、もう一度、自動運転するアニメーションを作って。と言ったら大変かなぁ。では、ＡＩみたいに本当の自動化プログラミングをやってみようか。」</p>
-    <p><img src="img/practice4/e0509-h.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <h2>（４）センサーを作る</h2>
-    <p>スプライトの前方向に「赤色のセンサー（左）」と「青色のセンサー（右）」を描きます。枠線は無しです。</p>
-    <p><img src="img/practice4/e0509-i.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <p>もし、赤色のセンサーが黒色の壁に触れたら、人の向きを変えたいです。右回転と左回転のどっちを選べばいいかな。</p>
-    <p>もし、青色のセンサーが黒色の壁に触れたら、今度はどっちを選べばいいかな。</p>
-    <p><img src="img/practice4/e0509-j.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <h2>（５）センサーのプログラムを作る</h2>
-    <p>旗が押されたら、スプライト「人」をスタート地点に移動して、大きさを[30]にして、ずっと[4]歩動かします。</p>
-    <p>もし「赤色」が「黒色」に触れたら向きを変えます。同じように「青色」のプログラムも考えてみてください。</p>
-    <p><img src="img/practice4/e0509-k.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <h3>ヒント</h3>
-    <p>●もしかすると「人」が「壁」に重なっているかもしれないのでｘｘｘｘします。</p>
-    <p>●もしかすると「いつも同じ角度」なので、ずうっと右にも左にも進めない場合があるかもしれないのでｘｘｘｘします。</p>
-    <p><img src="img/practice4/e0509-l.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <h2>ワークショップの時間</h2>
-    <p>メンター「それでは作業を始めてください。完成したら、自分で進む方向を考えるアニメーションを発表してください。」</p>
-    <p>メンター「早く終わった人は、自分でアイディアを考えて改造してみてください。」</p>
-    <p><img src="img/practice4/e0509-m.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <h2>メンターの作品例</h2>
-    <p><img src="img/practice4/e0509-n.gif" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <h2>おまけ（どんな動きになるかな？）</h2>
-    <p>自分自身のクローンを作ってみようか。</p>
-    <p><img src="img/practice4/e0509-o.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <h2>また次回も楽しみにしていまーす</h2>
-    <p><img src="img/practice4/e0509-p.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
-    <h3>CoderDojo青梅スタジオ</h3>
-    <p><a href="https://scratch.mit.edu/studios/28778405/" target="_blank">https://scratch.mit.edu/studios/28778405/</a>）</p>
-    
-  </div> <!-- class=limegreen-container（閉じる） -->
+<h2>第6回オンライン開催報告（2021-05-09）</h2>
 
-  <!-- footer section -->
-  <hr class="geekhr" />
+<h1>本日のScratchテーマは「スクラッチアートと自動運転」を作ってみるよ</h1>
+<p>ニンジャ３家族と作品制作するメンター３名が参加してくれました。Scratchじゃない方の「スクラッチアート」を使っためいろを自動脱出する自動運転アルゴリズムをみんなで体験しました。最終成果物は伝えずに、最初はたくさんの同じプログラムを組んで苦労しておき、次に自動化するためのアルゴリズムでプログラムで組んでみて、「おおー、こんな簡単にできるんだ」という体験をしました。では、その模様を以下にお伝えします。</p>
+<h2>本日の流れ</h2>
+<ul>
+<li>1. スクラッチアートを描く</li>
+<li>2. 自動運転（手動でプログラミング）</li>
+<li>3. 自動運転（自動化アルゴリズム）</li>
+</ul>
+<h2>前半のワークショップ</h2>
+<p><img src="img/practice4/e0509-0.png" class="img-fluid" alt="前半でやること（じゅんび）"></p>
+<h2>スクラッチアートとは？</h2>
+<p>クレヨンを使って、カラフルな模様を書いたその上から真っ黒に塗りつぶして、つまようじ等をつかってカリカリと模様を描くやつですね。これをScratchで描く。</p>
+<p><img src="img/practice4/e0509-a.png" class="img-fluid" alt="スクラッチアート"></p>
+<h2>（１）ステージ</h2>
+<p>ステージ（背景）に、筆の太さ[100]で、様々な色使いで好きな模様を描きます。デタラメでもいいし、水玉とか、何でもいいです。</p>
+<p><img src="img/practice4/e0509-b.png" class="img-fluid" alt="スクラッチアート"></p>
+<h2>（２）スプライト（めいろを描く）</h2>
+<p>最初にある「ネコ」のスプライトは消して、新しく自分で描くスプライトを追加します。</p>
+<p>先ほどの筆の太さ[100]のまま画面全体を黒色で埋めてください。次に、消しゴムの太さ[100]で迷路を描きます。迷路は太めの方が良いです。</p>
+<p><img src="img/practice4/e0509-c.png" class="img-fluid" alt="スクラッチアート"></p>
+<h3>確認</h3>
+<p>もしも、迷路の枠（スプライト）とステージ（背景）がズレてしまう場合は、スプライトのX座標、Y座標がステージの真ん中にくるように設定しよう。</p>
+<p><img src="img/practice4/e0509-d.png" class="img-fluid" alt="スクラッチアート"></p>
+<h2>ワークショップの時間</h2>
+<p>メンター「それでは作業を始めてください。完成したら作品を見せてくださいね。操作が分からない場合はメンターに聞いてください。」</p>
+<p><img src="img/practice4/e0509-e.png" class="img-fluid" alt="スクラッチアート"></p>
+<h2>（３）スプライト（手動でプログラミングする）</h2>
+<p>迷路のスタートからゴールまで移動するプログラムを作ります。空からながめるのでスプライトは「人の、上から見たやつ」がいいですね。</p>
+<p>迷路の太さに合わせたいので、スプライトの大きさは[30]に設定します。</p>
+<p>スタート地点を決めて、旗を押したら「人」が進み、曲がって、進み、曲がって、を繰り返してゴールを目指しましょう。</p>
+<p><img src="img/practice4/e0509-f.png" class="img-fluid" alt="スクラッチアート"></p>
+<h2>ワークショップの時間</h2>
+<p>メンター「それでは作業を始めてください。完成したら、自動運転するアニメーションを発表してください。」</p>
+<p><img src="img/practice4/e0509-g.png" class="img-fluid" alt="スクラッチアート"></p>
+<h2>後半のワークショップ</h2>
+<p>メンター「次に、新しい迷路を描いて、もう一度、自動運転するアニメーションを作って。と言ったら大変かなぁ。では、ＡＩみたいに本当の自動化プログラミングをやってみようか。」</p>
+<p><img src="img/practice4/e0509-h.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<h2>（４）センサーを作る</h2>
+<p>スプライトの前方向に「赤色のセンサー（左）」と「青色のセンサー（右）」を描きます。枠線は無しです。</p>
+<p><img src="img/practice4/e0509-i.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<p>もし、赤色のセンサーが黒色の壁に触れたら、人の向きを変えたいです。右回転と左回転のどっちを選べばいいかな。</p>
+<p>もし、青色のセンサーが黒色の壁に触れたら、今度はどっちを選べばいいかな。</p>
+<p><img src="img/practice4/e0509-j.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<h2>（５）センサーのプログラムを作る</h2>
+<p>旗が押されたら、スプライト「人」をスタート地点に移動して、大きさを[30]にして、ずっと[4]歩動かします。</p>
+<p>もし「赤色」が「黒色」に触れたら向きを変えます。同じように「青色」のプログラムも考えてみてください。</p>
+<p><img src="img/practice4/e0509-k.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<h3>ヒント</h3>
+<p>●もしかすると「人」が「壁」に重なっているかもしれないのでｘｘｘｘします。</p>
+<p>●もしかすると「いつも同じ角度」なので、ずうっと右にも左にも進めない場合があるかもしれないのでｘｘｘｘします。</p>
+<p><img src="img/practice4/e0509-l.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<h2>ワークショップの時間</h2>
+<p>メンター「それでは作業を始めてください。完成したら、自分で進む方向を考えるアニメーションを発表してください。」</p>
+<p>メンター「早く終わった人は、自分でアイディアを考えて改造してみてください。」</p>
+<p><img src="img/practice4/e0509-m.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<h2>メンターの作品例</h2>
+<p><img src="img/practice4/e0509-n.gif" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<h2>おまけ（どんな動きになるかな？）</h2>
+<p>自分自身のクローンを作ってみようか。</p>
+<p><img src="img/practice4/e0509-o.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<h2>また次回も楽しみにしていまーす</h2>
+<p><img src="img/practice4/e0509-p.png" class="img-fluid" alt="後半でやること（自動化プログラミング）"></p>
+<h3>CoderDojo青梅スタジオ</h3>
+<p><a href="https://scratch.mit.edu/studios/28778405/" target="_blank">https://scratch.mit.edu/studios/28778405/</a>）</p>
 
+
+<!-- footer section -->
+    <hr class="geekhr" />
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- My Header and Footer -->
+    <script>
+      $(function() {
+        $("#commonHeader").load("../header.html");
+        $("#commonFooter").load("../footer.html");
+      });
+    </script>
 
-    <!-- My Footer -->
-    <div id="footer">Copyright &copy; 2021 CoderDojo OME, Tokyo @ City Welfare Council</div>
-  </div> <!-- id=white-container（閉じる） -->
+<!-- 以上、コンテンツ-->
+        <div id="commonFooter"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 共通フッダー＆HTMLコンテナ -->
 </body>
 </html>
