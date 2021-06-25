@@ -59,6 +59,12 @@ a:focus {
 
 .container {
     background-color: #E1FFE1;
+	border-left-style: solid;
+	border-left-width: 4px;
+	border-left-color: white;
+	border-right-style: solid;
+	border-right-width: 4px;
+	border-right-color: white;
 }
 
 .limegreen-container a:hover, a:focus {
@@ -71,7 +77,7 @@ a:focus {
     min-height: 300px;
     width: 100vw;
     margin-bottom: 60px;
-    background: url("../img/imgGeek.jpg") no-repeat center;
+    background: url("/img/imgGeek.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -151,7 +157,7 @@ a:focus {
 	text-transform: none;
 	font-size: large;
 	color: #006600;
-	background-image: url(../img/i-arrowGreen.gif);
+	background-image: url(/img/i-arrowGreen.gif);
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 1em;
