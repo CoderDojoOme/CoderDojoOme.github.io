@@ -109,7 +109,7 @@ a:focus {
  
 .footer {
 	clear: both;
-	padding: 4px;
+	padding-top: 4px;
 	text-align:right;
 	color: #666666;
 	font-size: medium;
