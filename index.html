@@ -27,40 +27,34 @@
       gtag('config', 'UA-35574608-3');
     </script>
 
-  </head>
-  
+</head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-
+<!-- 共通のヘッダー・メニュー -->
 <div id="commonHeader"></div>
-<div class="container">
-  <div class="row justify-content-md-center">
-    <div class="col-md-12">
-  
-  
-    <div class="container-sm">
-      <!-- 最初の巨大メッセージ -->
-      <div class="limegreen-container">
+
+  <div class="container">
+    <div class="limegreen-container">  
+    <!-- 主コンテンツ -->  
       <h2>子どもたちのための無料のプログラミング道場</h2>
       <p>2020年から小学校でプログラミング教育が必修化となりました。今はまだ多くの人が
       単なるパソコン教育と誤解されているかも知れません。プログラミングは教えて習得
       するよりは自分から学んで得意としていくものであり、また自ら学ぶ子は、同じ趣味
       特技の仲間を作ることで成長します。そこで、７～１７歳を対象としたプログラ
       ミング仲間の集まれる場所作りをしたいと考えています。</p>
-      </div>
     </div>
+  </div>
 
-    <!-- 最初の巨大イメージ画像 -->
-    <div class="container-fluid">
-      <div class="jumbotron jumbotron-extend" style="width:100%";>
+  <!-- 最初の巨大イメージ画像 -->
+  <div class="container-fluid">
+    <div class="jumbotron jumbotron-extend" style="width:100%";>
         <h1 class="card-title bg-dark text-white" style="padding: 0.2em;">プログラムを遊びながら学ぼう！</h1>
         <p><a class="btn btn-primary btn-lg" href="connpass.html" role="button">参加する</a></p>
         <p><a class="btn btn-primary btn-lg" href="https://forms.gle/eRSkyMNh3sKDohXHA" role="button">体験のみ</a></p>
-      </div>
     </div>
-    <!--<img src="img/imgGeek.jpg" class="card-img" alt="ギークな画像">-->
+  </div>
 
-    <div class="container-sm">
-      <div class="limegreen-container">
+  <div class="container">
+    <div class="limegreen-container">  
 
     <div class="card p-3 mb-5">
       <p class="card-text">
@@ -193,7 +187,7 @@
        
 
   <!-- footer section -->
-  <hr class="geekhr" />
+  <hr />
   <div class="card-deck">
 
     <div class="card border-success mb-3">
@@ -242,28 +236,26 @@
       </div>
     </div>
 
-  </div> <!-- card-deck -->
-  <div id="commonFooter"></div>
-  </div> <!-- <limegreen-container -->
-
     <!-- icons of FB github in twitter -->
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- My Header and Footer -->
-    <script>
-    $(function() {
-      $("#commonHeader").load("header.html");
-      $("#commonFooter").load("footer.html");
-    });
-    </script>
-    <!-- My Footer -->
-</div> <!-- <container-sm> -->
-</div>
-</div>
-</div>
+  </div> <!-- card deck -->
+
+  <!-- 主コンテンツここまで -->
+  </div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("header.html");
+    $("#commonFooter").load("footer.html");
+  });
+</script>
 </body>
 </html>

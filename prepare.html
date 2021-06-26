@@ -31,15 +31,12 @@
   </head>
   
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-  
-  <div id="commonHeader"></div>
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md-12">
-  
-<div class="container-sm">
-  <div class="limegreen-container">
-
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+    
     <h1>CoderDojo事前準備のお願い</h1>
     <p><img src="img/scratch00.png" class="img-fluid" alt="事前準備のお願い"></p>
     <p>CoderDojo（コーダー道場）に初めて参加される人は、プログラミング環境（スクラッチScratch）の準備とオンライン会議（Zoom）の事前確認をお願いします</p>
@@ -90,28 +87,22 @@
     <p><img src="img/zoom03.png" class="img-fluid" alt="行き方と帰り方"></p>
 
 
-  <!-- footer section -->
-  <hr class="geekhr" />
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- My Header and Footer -->
-    <script>
-    $(function() {
-      $("#commonHeader").load("header.html");
-      $("#commonFooter").load("footer.html");
-    });
-    </script>
-
-  <div id="commonFooter"></div>
-
+  <!-- 主コンテンツここまで -->
 </div> <!-- <limegreen-container -->
-</div> <!-- <container-sm> -->
-</div>
-</div>
-</div>
-</div>
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("header.html");
+    $("#commonFooter").load("footer.html");
+  });
+</script>
 </body>
 </html>

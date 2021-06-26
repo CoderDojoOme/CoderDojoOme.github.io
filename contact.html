@@ -32,14 +32,12 @@
   </head>
   
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-  
-  <div id="commonHeader"></div>
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md-12">
-  
-<div class="container-sm">
-  <div class="limegreen-container">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
 
     <h1>お問合せ</h1>
     <h2>不明な点やご相談などお待ちしております</h2>
@@ -74,30 +72,22 @@
     <p><a href="https://coderdojo.jp/" target="_blank">CoderDojo Japan 公式サイト</a></p>
     
 
-  <!-- footer section -->
-  <hr class="geekhr" />
-  <div style="text-align: center;"><img src="img/cdome-illust360px.png" alt="CoderDojo 青梅 イラスト"></div>
-  <p>-</p>
+  <!-- 主コンテンツここまで -->
+  </div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- My Header and Footer -->
-    <script>
-    $(function() {
-      $("#commonHeader").load("header.html");
-      $("#commonFooter").load("footer.html");
-    });
-    </script>
-
-  <div id="commonFooter"></div>
-
-</div> <!-- <limegreen-container -->
-</div> <!-- <container-sm> -->
-</div>
-</div>
-</div>
-</div>
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("header.html");
+    $("#commonFooter").load("footer.html");
+  });
+</script>
 </body>
 </html>

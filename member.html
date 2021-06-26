@@ -32,34 +32,34 @@
   </head>
   
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-  
+
+  <!-- 共通のヘッダー・メニュー -->
   <div id="commonHeader"></div>
-  <div class="container">
-      <div class="row justify-content-md-center" width="100%">
-        <div class="col-md-12" width="100%">  
-  
-<div class="container-sm">
-  <div class="limegreen-container">
 
-    <h1>メンターの紹介</h1>
-    <p>CoderDojo青梅 のイベントを盛り上げてくれる様々な経歴を持ったメンバーです。</p>
-    <iframe src="https://member-cd.web.app/?dojo=ome" width="100%" height="100" id="member-frame" frameborder="0" scrolling="yes" allowfullscreen></iframe>
+  <!-- 主コンテンツ -->
+  <div class="container-fluid">
+    <div class="limegreen-container">
+      <h1>メンターの紹介</h1>
+      <p>CoderDojo青梅 のイベントを盛り上げてくれる様々な経歴を持ったメンバーです。</p>
+    </div>
+  </div>
 
-    <script>
-      window.addEventListener('message', function(e) {
-          if(e.origin=="https://member-cd.web.app"){
-              document.getElementById('member-frame').height = e.data + 140;
-          }
-      }, false);
-    </script>
+  <!-- メンバー紹介アプリを呼出 -->
+  <iframe src="https://member-cd.web.app/?dojo=ome" width="100%" height="100" id="member-frame" frameborder="0" scrolling="yes" allowfullscreen></iframe>
+  <script>
+    window.addEventListener('message', function(e) {
+      if(e.origin=="https://member-cd.web.app"){
+        document.getElementById('member-frame').height = e.data + 140;
+      }
+    }, false);
+  </script>
 
-  <p style="color:lightseagreen"><a href="https://member-cd.web.app/memberapp.html">Member-App</a>を使っています。Member-Appとは「コミュニティなどのメンバー紹介」を自分のホームページに追加できるアプリです。メンバー紹介は自分で編集できます。</p>
+  <div class="container-fluid">
+    <p style="color:lightseagreen"><a href="https://member-cd.web.app/memberapp.html">Member-App</a>を使っています。Member-Appとは「コミュニティなどのメンバー紹介」を自分のホームページに追加できるアプリです。メンバー紹介は自分で編集できます。</p>
+  </div>
 
-  <!-- My Footer -->
+  <!-- 共通のフッター -->
   <div id="commonFooter"></div>
-
-</div> <!-- <limegreen-container -->
-</div> <!-- <container-sm> -->
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -67,14 +67,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <!-- My Header and Footer -->
 <script>
-$(function() {
-  $("#commonHeader").load("header.html");
-  $("#commonFooter").load("footer.html");
-});
+  $(function() {
+    $("#commonHeader").load("header.html");
+    $("#commonFooter").load("footer.html");
+  });
 </script>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
