@@ -45,15 +45,9 @@
   </div>
 
   <!-- メンバー紹介アプリを呼出 -->
-  <iframe src="https://member-cd.web.app/?dojo=ome" width="100%" height="100" id="member-frame" frameborder="0" scrolling="yes" allowfullscreen></iframe>
-  <script>
-    window.addEventListener('message', function(e) {
-      if(e.origin=="https://member-cd.web.app"){
-        document.getElementById('member-frame').height = e.data + 140;
-      }
-    }, false);
-  </script>
+  <script src="https://member-cd.web.app/member.js"></script><script>MemberHere();</script>
 
+  <!-- 補足：Member-App紹介 -->
   <div class="container-fluid">
     <p style="color:lightseagreen"><a href="https://member-cd.web.app/memberapp.html">Member-App</a>を使っています。Member-Appとは「コミュニティなどのメンバー紹介」を自分のホームページに追加できるアプリです。メンバー紹介は自分で編集できます。</p>
   </div>
