@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>ヒントカード|Scratch</title>
+    <meta name="keywords" content="Scratch, プログラミング, ヒント, 作り方" />
+    <meta name="description" content="入門者向けScratchプログラミングの基本操作のヒントです。">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
+    <h1>スムーズに左右移動したい　/ Scratchヒント</h1>
+
+    <h2>（簡単な方法）左右の矢印キー［←］［→］が押されたとき</h2>
+    <h3>最初にやっておくこと</h3>
+    <p>スプライトが左右に移動するとき、上下さかさまにならないように［回転方向を左右のみにする］。</p>
+    <h3>イベントは「何かが、おきたとき」のきっかけです</h3>
+    <p>［左キー］が押されたとき、左方向に動かします。［右キー］が押されたら？</p>
+    <p><img src="img/a01.png" class="img-fluid"></p>
+
+    <h2>ちょっとだけ、動きがへん？</h2>
+    <p>「ツ・ツーーー」って感じ？キーボードで文字を入力するとき、キー１回で１文字だけ入力できるように２回目の入力検知が遅くなっています。<br />
+    最初から「ツーーー」っとスムーズに移動する方法を紹介します</p>
+
+    <h2>（スムーズに移動する方法）左右の矢印キー［←］［→］を調べる</h2>
+    <h3>どの［キー］が押されているか調べてから、動かします。</h3>
+    <p>［もしも、＜左キーが押された＞なら］、左方向に動かします。［右キー］が押されたら？</p>
+    <p><img src="img/a02.png" class="img-fluid"></p>
+
+  <!-- 主コンテンツここまで -->
+</div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("/header.html");
+    $("#commonFooter").load("/footer.html");
+  });
+</script>
+</body>
+</html>

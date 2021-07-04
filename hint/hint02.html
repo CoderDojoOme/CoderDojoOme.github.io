@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>ヒントカード|Scratch</title>
+    <meta name="keywords" content="Scratch, プログラミング, ヒント, 作り方" />
+    <meta name="description" content="入門者向けScratchプログラミングの基本操作のヒントです。">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
+    <h1>ボールを打ち返す　/ Scratchヒント</h1>
+
+    <h2>画面のはじっこにあたったら</h2>
+    <p>ボールが画面の端っこに当たったら、跳ね返るプログラムを作ります。</p>
+    <p><img src="/report/img/practice3/d0502-g.png" class="img-fluid"></p>
+    <p>最初の位置は、画面の中央（ X が 0 、y が 0 です）にしました。<br />
+    最初にどの方向にボールが動くか［(90)度に向ける］でボールの向きを決めます。<br />
+    次に、ずっと［10歩動かす］でボールを動かして、［もし端に着いたら、跳ね返る］で命令します。</p>
+    <p><img src="/report/img/practice3/d0502-f.png" class="img-fluid"></p>
+
+    <h2>ラケットで打ち返す</h2>
+    <p>ボールがラケットに触れたとき、ボールの向きを180度反転させます。このプログラムは算数の計算が、役に立ちます。</p>
+    <p><img src="img/b01.png" class="img-fluid"></p>
+    <p>もし、ボールがラケットに当たったら跳ね返そう。ボールのプログラムを改造します。<br />
+    このヒントでは「ラケット」という名前で四角形のスプライトを作成してあります。<br />
+    ［もし＜ラケットに触れたら＞なら］で、ボールの向きを180度反転しています。</p>
+    <p><img src="/report/img/practice3/d0502-j.png" class="img-fluid"></p>
+
+    <h2>動作確認</h2>
+    <p><img src="/report/img/practice3/d0501-n.gif" class="img-fluid"></p>
+
+    <!-- 主コンテンツここまで -->
+</div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("/header.html");
+    $("#commonFooter").load("/footer.html");
+  });
+</script>
+</body>
+</html>
