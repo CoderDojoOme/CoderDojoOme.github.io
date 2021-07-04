@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>ヒントカード|Scratch</title>
+    <meta name="keywords" content="Scratch, プログラミング, ヒント, 作り方" />
+    <meta name="description" content="入門者向けScratchプログラミングの基本操作のヒントです。">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
+    <h1>ジャンプする　/ Scratchヒント</h1>
+
+    <h2>［スペースキー］が押されたとき、ジャンプする</h2>
+    <p>スプライトを動かすプログラムを作ります。<br />
+    スペースキーが押されたとき、上に10歩ずつ10回移動して、その次、下に10歩ずつ10回移動します。</p>
+    <p><img src="img/c01.png" class="img-fluid"></p>
+
+    <h2>速さを調整する？</h2>
+    <p>10回と10歩の数字を、違う数字にするとどうなるかな？<br />
+    20歩ｘ5回の場合、50歩ｘ1回の場合で比べてみよう。</p>
+    <p><img src="img/c02.png" class="img-fluid"></p>
+
+    <h2>（上級編）自然なジャンプ</h2>
+    <p>ぴよーーーん。っとマリオみたいな、重力を感じる、自然なジャンプに挑戦する？<br />
+    最初は速く(+10歩)、1ずつ減らして、だんだんと遅く(+1歩)して、頂点は(0歩)。<br />
+    今度は、遅く(-1歩)からだんだんと速く(-10)移動していきます。<br />
+    プラス(+)とマイナス(-)が逆転するのは、Y座標に対して(+)を加えると上に、(-)を加えると下に、移動するからです。</p>
+    <p><img src="img/c03.png" class="img-fluid"></p>
+
+    <p>移動する歩数を返るには、「変数ブロック」を使います。［歩幅Ｙ］という変数を用意しました。<br />
+    ジャンプするキーが押されたら、［歩幅Ｙ］は10にします。<br />
+    上に移動するときは-1ずつ0まで11回繰り返します。<br />
+    下に移動するときは0を含まず10回繰り返します。<br /></p>
+    <p><img src="img/c04.png" class="img-fluid"></p>
+
+    <h2>動作確認</h2>
+    <p><img src="img/c05.gif" class="img-fluid"></p>
+
+    <!-- 主コンテンツここまで -->
+</div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("/header.html");
+    $("#commonFooter").load("/footer.html");
+  });
+</script>
+</body>
+</html>
