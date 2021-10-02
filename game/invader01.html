@@ -202,7 +202,7 @@ Module.expectedDataFileDownloads++;
     }
     var PACKAGE_NAME = 'invader01.data';
     var REMOTE_PACKAGE_NAME = (Module['filePackagePrefixURL'] || '') + 'invader01.data';
-    var REMOTE_PACKAGE_SIZE = 112186;
+    var REMOTE_PACKAGE_SIZE = 111398;
     var PACKAGE_UUID = '51f84d03-0c74-4552-ac13-924e79e76977';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
@@ -306,9 +306,9 @@ function assert(check, msg) {
       new DataRequest(0, 2577, 0, 0).open('GET', 'invader01.ax');
       new DataRequest(2577, 96583, 0, 0).open('GET', 'enemy01.png');
       new DataRequest(96583, 108104, 0, 0).open('GET', 'enemy02.png');
-      new DataRequest(108104, 110613, 0, 0).open('GET', 'hit.png');
-      new DataRequest(110613, 110835, 0, 0).open('GET', 'missile.png');
-      new DataRequest(110835, 112186, 0, 0).open('GET', 'mytank.png');
+      new DataRequest(108104, 110103, 0, 0).open('GET', 'hit.png');
+      new DataRequest(110103, 110340, 0, 0).open('GET', 'missile.png');
+      new DataRequest(110340, 111398, 0, 0).open('GET', 'mytank.png');
 
 
     function processPackageData(arrayBuffer) {
