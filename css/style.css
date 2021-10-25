@@ -46,6 +46,10 @@ body {
     line-height: 1.6em;
 }
 
+.limegreen-container strong {
+    font-weight: bold;
+}
+
 .limegreen-container h1 {
 	text-transform: none;
 	padding:0.5em;
