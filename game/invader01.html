@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>invader01 - HSP3Dish</title>
+    <title>はじめてのHSPはいつものインベーダー</title>
     <style>
       body {
         font-family: arial;
@@ -117,6 +117,7 @@
     <div class="emscripten_border">
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     </div>
+    <textarea id="output" rows="8"></textarea>
 
     <script type='text/javascript'>
       var statusElement = document.getElementById('status');
@@ -202,7 +203,7 @@ Module.expectedDataFileDownloads++;
     }
     var PACKAGE_NAME = 'invader01.data';
     var REMOTE_PACKAGE_NAME = (Module['filePackagePrefixURL'] || '') + 'invader01.data';
-    var REMOTE_PACKAGE_SIZE = 111398;
+    var REMOTE_PACKAGE_SIZE = 182221;
     var PACKAGE_UUID = '51f84d03-0c74-4552-ac13-924e79e76977';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
@@ -303,12 +304,14 @@ function assert(check, msg) {
       },
     };
 
-      new DataRequest(0, 2577, 0, 0).open('GET', 'invader01.ax');
-      new DataRequest(2577, 96583, 0, 0).open('GET', 'enemy01.png');
-      new DataRequest(96583, 108104, 0, 0).open('GET', 'enemy02.png');
-      new DataRequest(108104, 110103, 0, 0).open('GET', 'hit.png');
-      new DataRequest(110103, 110340, 0, 0).open('GET', 'missile.png');
-      new DataRequest(110340, 111398, 0, 0).open('GET', 'mytank.png');
+      new DataRequest(0, 2766, 0, 0).open('GET', 'invader01.ax');
+      new DataRequest(2766, 96772, 0, 0).open('GET', 'enemy01.png');
+      new DataRequest(96772, 101759, 0, 0).open('GET', 'enemy02.png');
+      new DataRequest(101759, 103758, 0, 0).open('GET', 'hit.png');
+      new DataRequest(103758, 103995, 0, 0).open('GET', 'missile.png');
+      new DataRequest(103995, 106215, 0, 0).open('GET', 'mytank.png');
+      new DataRequest(106215, 173087, 0, 0).open('GET', 'se_hit_001.wav');
+      new DataRequest(173087, 182221, 0, 0).open('GET', 'se_shot_001.wav');
 
 
     function processPackageData(arrayBuffer) {
@@ -328,6 +331,8 @@ function assert(check, msg) {
           DataRequest.prototype.requests["hit.png"].onload();
           DataRequest.prototype.requests["missile.png"].onload();
           DataRequest.prototype.requests["mytank.png"].onload();
+          DataRequest.prototype.requests["se_hit_001.wav"].onload();
+          DataRequest.prototype.requests["se_shot_001.wav"].onload();
 
           Module['removeRunDependency']('datafile_invader01.data');
 
