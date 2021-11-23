@@ -1,0 +1,254 @@
+﻿<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>ヒントカード|HSP3</title>
+    <meta name="keywords" content="Scratch, プログラミング, ヒント, 作り方" />
+    <meta name="description" content="入門者向けHSP3プログラミングの基本操作のヒントです。">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
+    <h1>良く使うコマンド　/ HSP3ヒント</h1>
+
+    <pre>
+        ▼ライブラリの選択
+        #include "d3m.hsp"	3D描画
+        
+        ▼よく使うコマンド
+        
+        #pack "a.txt"	実行ファイルと一緒にパックする
+        #epack "a.bmp"	暗号化してパックする
+         screen 0,1024,800	画面サイズ(0は画面のID複数表示できる)
+        
+        //　━━━━━━━━━━━　JavaScript
+        //WEB形式に変換するには、「hsp3dh.exe」を実行する。
+        //画像などのメディアファイルは\dataフォルダにまとめて入れる。
+        //コードはパスを記述しなくてもいい
+        mmload "se_shot_001.wav", 0, 0
+        celload "enemy02.png", 3
+        
+        // ━━━━━━━━━━ 画像ファイル（外部ファイル）
+        //Picload "画像パス", 読み込みモード　　　Bmp, gif, jpg, ico, cur, wmf
+        //Celload "画像パス", buff-ID, 0
+        //Celdiv buff-ID, 横分割, 縦分割
+        //Celput id, 画像番号, zoomY(0.0), zoomY(0.0), 角度(0.0)
+        celload "enemy02.png", 3
+        celdiv 3, 100, 66
+        pos enemy_x(cnt), enemy_y(cnt_y) + enemy_row
+        celput enemy, enemy_turn * -1
+        
+        
+        // ━━━━━━━━━━━━━━━━ 変数
+        #const BG_R 255
+        Dim a, 5
+        A(0) = 1, 2, 3
+        >Mes a(0)
+        >1
+        
+        // ━━━━━━━━━━━━━━━━　画面表示
+        
+        // -------------------------------
+        //文字フォント
+        // -------------------------------
+          font "Arial",60,2+opt
+          mes "Arial"
+        
+        // -------------------------------
+        // Window タイトル
+        // -------------------------------
+        Title "アプリのタイトル" + "文字列可"
+        
+        // -------------------------------
+        // Windowのアイコン
+        // -------------------------------
+        #packopt icon "safe.ico"
+        
+        // -------------------------------
+        // 画像イメージ
+        // -------------------------------
+        Celload "xxx.bmp"  ; 画像ファイル
+        objImg = stat         ; 画像のIDを保持。画像を読むとstatがカウントされる1,2,3,4
+        
+        Redraw 0 ;描画開始
+        Color 0, 0, 64
+        Boxf   ; 背景を消す
+        Gmode 2 ; 透明色あり
+        Pos x, y 
+        Celput objImg
+        ; Celput イメージID, 分割画像No,横倍率,縦倍率,角度
+        Redraw 1 ;描画終わり
+        
+        // -----------------------------------
+        // ラインを描く
+        // ----------------------------------
+        color 255,0,0			;赤色
+        i = 0
+        repeat 50
+            line 100,100,100+i,200
+            i=i+10
+        loop
+        
+        // --------------------
+        // 四角形を描く
+        // --------------------
+        boxf 100,100,200,200
+        
+        // --------------------
+        // まるを描く
+        // --------------------
+        color 255,0,0			;赤色
+        circle 100,100,200,200,0  ;四角形に収まる○輪郭
+        circle 100,300,200,400,1　;四角形に収まる●塗りつぶし
+        
+        
+        // ━━━━━━━━━━━━━━━━━━━━ 制御
+        
+        //--------------------------
+        // 繰り返し repeat 回数, cntの初期値
+        // -------------------------
+         repeat 10
+             ~~
+            Mes cnt
+            Cnt 	;cntは何もしなくても+1される
+         loop
+        
+        // --------------------------
+        // 行ジャンプ、サブルーチン
+        // ----------------------------
+        *main
+            Wait 10
+            Goto *main
+            
+            Gosub *sub
+        
+        *sub
+            ~~
+            Return
+            
+        // --------------------------
+        // Windowsタスクにリソースをゆずる。処理待ち
+        // -------------------------
+            Await 20
+            Wait [10ms]
+            
+        // -------------------------------
+        // 比較
+        // -------------------------------
+        及びは、&
+        もしくは、|
+        
+        
+            
+        // ━━━━━━━━━━━━━━ 操作INPUT
+        
+        //--------------------------
+        // キー入力
+        // p3: stick key; if key =1 ; 入力１回だけ判定
+        // p3: stick key,15; if key =1 ; キーを連続押している間（同時には押せない）
+        // p3: stick key; if key&1 ; ２つ以上のキーを同時受付できる
+        // ----------------------------
+        *main
+            Stick key, 15, p3  ; p3を1にするとアクティブなときだけキー入力する
+            If key&1 : x=x-speed    ;←
+            If key&4 : x=x+speed   ;→
+            If key&2 : y=y-speed    ;↑
+            If key&8 : y=y+speed   ;↓
+            ; 16 space
+            ; 32 enter
+            ; 64 ctrl
+            If key & 128 : end  ;ESC
+            If key = 128 :end
+            ; 256 マウス左ボタン
+            ; 512 マウス右ボタン
+            ;1024 TAB
+            Goto *main
+        
+        // ━━━━━━━━━━━━━━ ユーザー定義関数
+        
+        // ---------------------------------------
+        // ユーザー定義関数
+        // ---------------------------------------
+        goto *start
+        #defcfunc plushundred double intValue1, double intValue2
+            ret = intValue1 + intValue2
+            return ret
+        
+        *start
+            answer = 0
+            answer = plushundred(10, 100)
+            pos 100,100
+            mes answer
+            stop
+        
+        // -------------------------
+        // ユーザー定義関数のローカル変数が重複しても大丈夫なモジュール化
+        // module, globalを省略するとエラーになる。
+        // -------------------------
+        goto *start
+        
+        ;#module
+        #defcfunc plushundred double intValue1, double intValue2
+            ret = intValue1 + intValue2
+            return ret
+        ;#global
+        
+        *start
+            answer = 0
+            answer = plushundred(10, 100)
+            pos 100,100
+            mes answer
+        
+            intValue1 = 200　　　　;※ここでエラーになる
+            pos 100,200
+            mes intValue1
+            stop
+    </pre>
+
+    <!-- 主コンテンツここまで -->
+</div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("/header.html");
+    $("#commonFooter").load("/footer.html");
+  });
+</script>
+</body>
+</html>
