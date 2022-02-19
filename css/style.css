@@ -129,4 +129,18 @@ body {
 	height:100%;
 }
 
-  
+pre {
+	margin: 1em 0; /* ブロック前後の余白 */
+	padding: 1em; /* ブロック内の余白 */
+	border-radius: 5px; /* 角丸 */
+	background: #25292f; /* 背景色 */
+	color: #fff; /* 文字色 */
+	white-space: pre-wrap; /* はみ出たときに折り返す */
+}  
+
+table {
+	border-collapse: collapse;
+}
+th, td {
+	border: solid 1px #333; /* 線の種類 太さ 色 */
+}

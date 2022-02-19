@@ -37,11 +37,155 @@
   <div class="limegreen-container">  
   <!-- 主コンテンツ -->
 
-    <h1>良く使うコマンド　/ HSP3ヒント</h1>
+  <h1>ゴール：配列データをグラフで可視化する / JavaScript</h1>
+  <p>Google Chart ライブラリを使うと、数行のコードでキレイなグラフを描画できる。</p>
+  <p><img src="img/js20220219a.png" class="img-fluid"></p>
+  <h2>（１）HTMLのひな形</h2>
+  <p>何度も作成するHTMLは、空っぽの最小限のHTMLを用意しておくと便利なので、[template.html]を準備する。</p>
 
-    <pre>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;★タイトル★&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;★タイトル★&lt;/h1&gt;
+  &lt;/body&gt;
+  &lt;script type="text/javascript"&gt;
+  &lt;/script&gt;
+&lt;/html&gt;</code></pre>
 
-    </pre>
+  <h2>（２）グラフ用のHTMLを作成</h2>
+  <p>例えば[chart.html]などという名前で新しいファイルを作る。空のHTMLタグは[template.html]からコピペする。★★の部分は自由に置き換えする。</p>
+  <pre><code>    &lt;!DOCTYPE html&gt;
+    &lt;html lang="ja"&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+        &lt;title&gt;★タイトル★&lt;/title&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;★タイトル★&lt;/h1&gt;
+        ★ここに（３）のタグを追加する★
+        &lt;div id='myChart'&gt;★タイトル★&lt;/div&gt;
+      &lt;/body&gt;
+      ★ここに（４）のコードを追加する★
+      &lt;script type="text/javascript"&gt;
+      ★ここに（５）のコードを追加する★
+      ★ここに（６）のコードを追加する★
+      &lt;/script&gt;
+    &lt;/html&gt;</code></pre>
+
+  <h2>（３）グラフを描く場所を指定</h2>
+  <p> divタグでidを指定する。ついでに縦横のピクセルサイズも指定する。</p>
+  <pre><code>&lt;div id="myChart" style="width: 900px; height: 500px;"&gt;&lt;/div&gt;</code></pre>
+
+
+  <h2>（４）Google Chart ライブラリ</h2>
+  <p>&lt;/body&gt;と&lt;script タグの間にライブラリを呼び出すためのリンクを追加する</p>
+<pre><code>&lt;script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"&gt;&lt;/script&gt;</code></pre>
+
+  <h2>（６）データを準備する</h2>
+  <P>google chart ライブラリを準備して、配列データを data にセットする。配列のデータは自由に書き換えする。</P>
+
+<pre><code>
+  // グラフを描画するための[corechart]パッケージを読み込む
+  google.charts.load("current", {packages:["corechart"]});
+
+  // 変更されたら[drawchart]を実行する
+  google.charts.setOnLoadCallback(drawChart);
+  
+  // データを[data]にセットする
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['競技', '点数'],
+      ['スノボ', 10],
+      ['スキー', 50],
+      //ここにデータを追加したり、名前や数値を変更できる
+    ]);
+</code></pre>
+
+<table>
+  <tr><th>　競技　</th><th>点数</th></tr>
+  <tr><td>スノボ　</td><td>10</td></tr>
+  <tr><td>スキー　</td><td>50</td></tr>
+  <tr><td>スケート</td><td>30</td></tr>
+</table>
+
+<h2>（５）グラフを描く</h2>
+<P>準備したデータを使ってグラフを 'myChart' ID の場所に表示する。以下のコードをデータの次に描く</P>
+<pre><code>var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+  chart.draw(data);</code></pre>
+
+<h2>（６）ここまでの完成コード</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+  &lt;html lang="ja"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;★タイトル★&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;★タイトル★&lt;/h1&gt;
+    &lt;div id="myChart" style="width: 900px; height: 500px;"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+  
+    &lt;!-- google script --&gt;
+    &lt;script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['競技', '点数'],
+          ['スノボ',        10],
+          ['スキー',        50],
+          ['アイススケート', 30],
+          ['カーリング',     80],
+          ['スキークロス',   30]
+        ]);
+  
+      var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+      chart.draw(data);
+      };
+    &lt;/script&gt;
+  
+  &lt;/html&gt;
+  </code></pre>
+  <p>コードを VScode の Live Server で実行してみる。</p>
+  <p><img src="img/js20220219b.png" class="img-fluid"></p>
+
+  <h2>（７）プログラミングはここからが面白い</h2>
+  <p>グラフを追加するので divタグで idを追加します。例えば myChart2 を mychart の次の行に追加。</p>
+  <pre><code>&lt;div id="myChart" style="width: 900px; height: 500px;"&gt;&lt;/div&gt;
+&lt;div id="myChart2" style="width: 900px; height: 500px;"&gt;&lt;/div&gt;&lt;!-- 追加 --&gt;</code></pre>
+  <p>そして棒グラフの描画を追加する</p>
+  <pre><code>var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+chart.draw(data);
+//下記を追加
+var chart = new google.visualization.BarChart(document.getElementById('myChart2'));
+chart.draw(data);</code></pre>
+<p>コードを VScode の Live Server で実行してみる。</p>
+<p><img src="img/js20220219c.png" class="img-fluid"></p>
+
+  <h2>（８）同じように以下を追加してみよう</h2>
+  <p>３つ目のdivタグ idを追加して。google.visualization.LineChart を追加する。実行して下図を確認する。</p>
+  <p><img src="img/js20220219d.png" class="img-fluid"></p>
+
+  <h2>（９）宿題：動的にグラフ描画</h2>
+  <p>［ボタン］を設置して、配列データを変化させて動的にグラフを描画する。これが出来るなら自動的にデータを更新してインタラクティブなWEBサイトを公開できるはず。</p>
+
+
+
+  <h2>コードサンプルはgoogle公式サイトで参照できます</h2>
+  <p><a href="https://developers.google.com/chart/" target="_blank">Google Chart マニュアル</a></p>
+
+
 
     <!-- 主コンテンツここまで -->
 </div> <!-- <limegreen-container -->
