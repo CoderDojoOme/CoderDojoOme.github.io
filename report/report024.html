@@ -9,9 +9,9 @@
     <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>開催報告|CoderDojo青梅</title>
+    <title>Scratch「自動で迷路づくり」|CoderDojo青梅</title>
     <meta name="keywords" content="Scratch, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
-    <meta name="description" content="第21回 オンライン「迷路で逃走中」（2022年5月15日）毎回、自分の好きなテーマで自由にプログラミングしているのですが、今回はみんなで共通の「自動で迷路描画」の続編「迷路で逃走中」に挑戦してプログラムらしいプログラムを作るためのレベルアップ講座パート２に取り組みました。">
+    <meta name="description" content="Scratchで作ろう「自動で迷路づくり」は、同じコトを繰り返す作業はコンピュータにやらせよう。毎回、変わる迷路を自動でつくるぞ。">
     <!-- favicon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
@@ -28,11 +28,11 @@
       gtag('config', 'UA-35574608-3');
     </script>
 
-    <meta property="og:title" content="第21回 オンライン「迷路で逃走中」（2022年5月15日）" />
-    <meta property="og:description" content="第21回 オンライン「迷路で逃走中」（2022年5月15日）毎回、自分の好きなテーマで自由にプログラミングしているのですが、今回はみんなで共通の「自動で迷路描画」の続編「迷路で逃走中」に挑戦してプログラムらしいプログラムを作るためのレベルアップ講座パート２に取り組みました。" />
+    <meta property="og:title" content="Scratchで作ろう「自動で迷路づくり」" />
+    <meta property="og:description" content="Scratchで作ろう「自動で迷路づくり」は、同じコトを繰り返す作業はコンピュータにやらせよう。毎回、変わる迷路を自動でつくるぞ。" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://coderdojoome.github.io/report/report024.html" />
-    <meta property="og:image" content="https://coderdojoome.github.io/report/img/practice19/00top.png" />
+    <meta property="og:image" content="https://coderdojoome.github.io/report/img/practice18/07_addwall.png" />
     <meta property="og:site_name" content="CoderDojo青梅" />
 
   </head>
@@ -44,145 +44,167 @@
   <div class="limegreen-container">  
   <!-- 主コンテンツ -->
 
-
-  <h3>▼発表するもの（投稿してください）</h3>
-  <p><a href="https://closedsite-b3bc1.firebaseapp.com/?category=ome#" target="_blank">CoderDojo青梅 みんなの投稿（Voting-App）</a></p>
-     
-  <h3>▼みんなのScratch作品</h3>
-  <p><a href="https://scratch.mit.edu/studios/28778405/" target="_blank">CoderDojo青梅 Scratchスタジオ</a></p>
-  
-  <hr>
-
   <!-- 上のプロパティSNSの画像差し替えること  -->
-<h2>第21回 オンライン（2022年5月15日）</h2>
+  <h2>目次</h2>
+  <ul>
+    <li><a href="/report/report024.html">自動で迷路づくり</a></li>
+    <li><a href="/report/report025.html">迷路で逃走中</a></li>
+  </ul>
 
-<h1>本日はレベルアップ講座パート２「迷路描画で逃走中」</h1>
-<p>「自動で迷路描画」の続編、「迷路で逃走中」でパワーアップしましょう！</p>
+<h1>【パート１】Scratchで作ろう「自動で迷路づくり」</h1>
+<p>毎回変わる迷路が完成したら今度は、初級はゴールの紙吹雪、中級から自動で追跡してくるハンター、上級者は自分で操作するプレイヤーを開発しちゃうぞ。</p>
 
-<h2>ゴールで使える派手な演出（紙吹雪）</h2>
-<p><img src="img/practice19/01-paper.gif" class="img-fluid" alt=""></p>
+<h2>完成作品例</h2>
+<p>柱を縦横（10コｘ8コ）に並べて、柱の間に壁を作ります</p>
+<p><img src="img/practice19/a01-maze1.png" class="img-fluid" alt=""></p>
 
-<h3>紙切れをつくろう</h3>
-<p>新しいスプライトを描いて作ります。<br />わざと中心からズラす。後で不規則性が賑やかな雰囲気になる。</p>
-<p><img src="img/practice19/02-paper1.png" class="img-fluid" alt=""></p>
+<h2>Ｘ座標とＹ座標ってなぁに？</h2>
+<p>背景の［幅:480］と［高さ:360］。横の目盛りをＸ座標、縦の目盛りをＹ座標と呼びます。真ん中がＸ＝０、Ｙ＝０です。</p>
+<p><img src="img/practice19/a01-maze2.png" class="img-fluid" alt=""></p>
 
-<h3>紙切れの位置</h3>
-<p>Ｘ座標はランダムに、Ｙ座標はこの辺（+160）</p>
-<p><img src="img/practice19/03-paper2.png" class="img-fluid" alt=""></p>
+<h2>（１）柱を並べます</h2>
+<p><img src="img/practice19/a01-maze3.png" class="img-fluid" alt=""></p>
 
-<h3>紙切れを落下させる</h3>
-<p>上から下に落ちていく</p>
-<p><img src="img/practice19/04-paper3.png" class="img-fluid" alt=""></p>
+<h3>四角形を10コ、描いてください</h3>
+<p><img src="img/practice19/a01-maze4.png" class="img-fluid" alt=""></p>
 
-<h3>ここからチャレンジ</h3>
-<ol>
-    <li>回転しながら落ちていく</li>
-    <li>紙吹雪を複製する(30～50枚くらい）</li>
-    <li>色を変える</li>
-</ol>
-<p><img src="img/practice19/05-paper4.png" class="img-fluid" alt=""></p>
+<h3>柱[はしら]をつくる</h3>
+<p>四角形の大きさをととのえる1。大きさは10～15くらいの正方形。<br />
+  ていねいにマウスで大きさを調整してね。好きな色。形は丸でもいいけどね。<br />
+  コスチュームの名前は「柱」もしくは「はしら」にする。</p>
+  <p><img src="img/practice19/a01-maze5.png" class="img-fluid" alt=""></p>
 
+  <h3>柱[はしら]の最初の位置</h3>
+  <p>柱を置く場所をきめる。<br />
+    ひとつめの柱の場所は、［X座標 -180］、［Y座標 140］にする。<br />
+    あとで向きをつかうので、最初は90度に向ける。</p>
+    <p><img src="img/practice19/a01-maze6.png" class="img-fluid" alt=""></p>
+  
+<h2>柱を10コ、置く（どうやって並べる？　考えてみよう）</h2>
+<p>横に40ずつ間を開けて、柱を10個並べます</p>
+<p><img src="img/practice19/a01-maze7.png" class="img-fluid" alt=""></p>
+<p><img src="img/practice19/a01-maze8.gif" class="img-fluid" alt=""></p>
 
-
-
-
-<h2>(中級) 迷路を動き回るバグ（虫）</h2>
-<ul>
-    <li>毎回変わる迷路の続き</li>
-    <li>予想できないランダムな動き</li>
-</ul>
-<p>前回と同じ座標(X:-180, Y140)から迷路を描画していたら、真ん中がちょうど(X:0, Y0)のはずです。<br />
-１．バグの最初の位置はX0, Y0にする<br />
-２．ずっと彷徨います<br />
-<br />
-さて、どうする・・・？<br />
-</p>
-<p><img src="img/practice19/06-bug1.png" class="img-fluid" alt=""></p>
-
-<p>ヒント</p>
 <p>
-ヒント１．どちらを向くか？<br />
-<br />
-ヒント２．空いていれば、１マスの距離は40<br />
-<br />
-ヒント３．壁があろうがなかろうが進む<br />
-<br />
-ヒント４．壁があるなら進んだ分、戻ればいい<br />
-<br />
-ヒント５．千里の道も一歩から<br />
+  サンプルコードはこの下（自分で出来たら、確認してみよう）<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
 </p>
-<p><img src="img/practice19/07-bug2.png" class="img-fluid" alt=""></p>
 
+<h2>柱を10コ、置く（コード）</h2>
+<p>ここまでのプログラム（コード）です。</p>
+<p><img src="img/practice19/a01-maze9.png" class="img-fluid" alt=""></p>
 
+<h2>くりかえし（タテにならべる）</h2>
+<p>縦にも40ずつ間を開けて、柱のグループを８つ並べます。</p>
+<p><img src="img/practice19/a02-piller1.png" class="img-fluid" alt=""></p>
 
-<h2>(上級) 右手の法則をつかった（カニ）</h2>
-<p><img src="img/practice19/08-right1.png" class="img-fluid" alt=""></p>
-
-<h3>右手の壁に沿って移動（ステップ１）</h3>
 <p>
-    １．まずは１匹で作る。座標はX0, Y0<br />
-    ２．回転方法を[回転しない]にする<br />
-    ３．ずっと<br />
-    　　□□□□□<br />
-    ４．もし＜　＞たら<br />
-    　　□□□□□<br />
-    　　□□□□□<br />
-    ５．でなければ（壁に触れていなければ）<br />
-    　　□□□□□<br />
-    　　□□□□□<br />
-    ６．ずっとに戻る<br />
+  サンプルコードはこの下（自分で出来たら、確認してみよう）<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
 </p>
-<p><img src="img/practice19/08-right2.gif" class="img-fluid" alt=""></p>
 
-<h3>右手の壁に沿って移動（ステップ２）</h3>
+<h2>柱を縦にも並べる（コード）</h2>
+<p>ここまでのプログラム（コード）です。</p>
+<p><img src="img/practice19/a02-piller2.png" class="img-fluid" alt=""></p>
+
+<h2>🎉おめでとう！</h2>
+<p>X座標とY座標で繰り返しクローンができると・・・どんなコトが出来るようになるでしょうか？</p>
+<p><img src="img/practice19/a02-piller3.png" class="img-fluid" alt=""></p>
+
+<h2>（２）棒(ぼう)を追加(ついか)する</h2>
+<p><img src="img/practice19/a03-wall1.png" class="img-fluid" alt=""></p>
+
+<h3>棒をつくる</h3>
+<p>棒になる長方形をつくります。柱の間隔が40なので、棒の長さは30～35くらい。<br />
+  柱と同じスプライトに、新しいコスチュームを追加します（縦7ｘ横32くらいの大きさの四角形）。<br />
+  コスチュームの名前は「かべ」にする。<br />
+　★注意★　柱と同じスプライトにカベを追加するよ。</p>
+<p><img src="img/practice19/a03-wall2.png" class="img-fluid" alt=""></p>
+
+<h3>画面の枠をつくる</h3>
+<p>あとで使う画面の枠もつくっておきます。<br />
+  四角形を四つ組み合わせて。あとで調整するので大きさはてきとうに。<br />
+  コスチュームの名前は「枠」にする。</p>
+<p><img src="img/practice19/a03-wall3.png" class="img-fluid" alt=""></p>
+
+<h2>［ブロックの定義］をつかう</h2>
+<p>柱と同じロジックで、棒倒しのカベもつくります。<br />
+  ブロック定義を使って、自分専用のブロックを作る！</p>
+<p><img src="img/practice19/a03-wall4.png" class="img-fluid" alt=""></p>
+
+<h3>つくったプログラム（コード）を定義ブロックに付け替える。</h3>
+<p><img src="img/practice19/a03-wall5.png" class="img-fluid" alt=""></p>
+
+<h3>さっきと同じく柱が並ぶかな？　（試してみよう）</h3>
+<p><img src="img/practice19/a03-wall6.png" class="img-fluid" alt=""></p>
+
+<h3>コスチューム「柱」を指定して並び替え。「カベ」も追加する。<br />
+  旗を押して実行してみよう。  </h3>
+<p><img src="img/practice19/a03-wall7.png" class="img-fluid" alt=""></p>
+
+<h3>最後に「枠」も追加する。<br />
+  枠は１回だけ表示するので、場所［X座標０、Y座標０］を指定する。</h3>
+<p><img src="img/practice19/a03-wall8.png" class="img-fluid" alt=""></p>
+
+<h3>実行してみよう（ハタを押す）</h3>
+<p><img src="img/practice19/a03-wall9.png" class="img-fluid" alt=""></p>
+
+<h2>棒(ぼう)をたおして、壁(かべ)にする</h2>
+<p>クローンされたコスチュームが「カベ」の時だけ、棒を倒します。</p>
+<p><img src="img/practice19/a04-wall1.png" class="img-fluid" alt=""></p>
+
+<h3>棒を倒したら、少しずらす</h3> 
+<p><img src="img/practice19/a04-wall2.png" class="img-fluid" alt=""></p>
+
+<p>棒は倒した。でも全部同じ向き、右側に並んでいるね。</p>
+
+<h3>どちらの方向に倒すか？</h3> 
+<p><img src="img/practice19/a04-wall3.png" class="img-fluid" alt=""></p>
+
+<h2>クイズです。このコード、どう作る？</h2>
+<p>クローンされたとき、候補１～４を選んで、回転してください。</p>
+<p><img src="img/practice19/a04-wall4.png" class="img-fluid" alt=""></p>
+
 <p>
-    １．まずは１匹で作る。座標はX0, Y0<br />
-    ２．回転方法を[回転しない]にする<br />
-    ３．ずっと<br />
-    　　<strong>【法則①】</strong><br />
-    ４．もし＜　＞たら<br />
-    　　<strong>【法則②】</strong><br />
-    　　□□□□□<br />
-    ５．でなければ（壁に触れていなければ）<br />
-    　　□□□□□<br />
-    　　<strong>【法則③】</strong><br />
-    ６．ずっとに戻る<br />
+  サンプルコードはこの下（自分で出来たら、確認してみよう）<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
+  <br />
+  ↓<br />
 </p>
-<p><img src="img/practice19/10-right2.png" class="img-fluid" alt=""></p>
 
-<h3>右手の壁に沿って移動（ステップ３）</h3>
-<p>
-    １．まずは１匹で作る。座標はX0, Y0<br />
-    ２．回転方法を[回転しない]にする<br />
-    ３．ずっと<br />
-    　　<strong>【法則①：進む】</strong><br />
-    ４．もし＜　＞たら<br />
-    　　<strong>【法則②：戻る】</strong><br />
-    　　<strong>【法則②：前に進めないから左を向く】</strong><br />
-    ５．でなければ（壁に触れていなければ）<br />
-    　　<strong>【法則③：進めたのでそのまま何もしない】</strong><br />
-    　　<strong>【法則③：もし右が空いていたら右を向く】</strong><br />
-    ６．ずっとに戻る<br />
-</p>
-<p><img src="img/practice19/10-right2.png" class="img-fluid" alt=""></p>
+<h3>サンプル</h3>
+<p><img src="img/practice19/a04-wall5.png" class="img-fluid" alt=""></p>
 
-<h3>右手の壁に沿って移動（ステップ４）</h3>
-<p>
-    １．まずは１匹で作る。座標はX0, Y0<br />
-    ２．回転方法を[回転しない]にする<br />
-    ３．ずっと<br />
-    　　<strong>【［適当］歩動かす】</strong><br />
-    ４．もし＜　壁に触れ　＞たら<br />
-    　　<strong>【移動した分、戻る】</strong><br />
-    　　<strong>【左を向く（前が壁の時）】</strong><br />
-    ５．でなければ（壁に触れていなければ）<br />
-    　　<strong>【何もしない（前が空いていた。その場にいる）】</strong><br />
-    　　<strong>【右を向く（右に壁が無いなら右に行く）】</strong><br />
-    ６．ずっとに戻る<br />
-    ７．完成したら複数クローンする<br />
-</p>
-<p><img src="img/practice19/10-right2.png" class="img-fluid" alt=""></p>
 
+<h2>🎉おめでとう！</h2>
+<p>プラットフォームが出来た。ここからは何をする？<br />
+  プラットフォームとは、共通の土台、共通の舞台、共通のしくみ。  </p>
+  <p><img src="img/practice19/a04-wall6.png" class="img-fluid" alt=""></p>
 
 
 

@@ -1,0 +1,205 @@
+﻿<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>開催報告|CoderDojo青梅</title>
+    <meta name="keywords" content="Scratch, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
+    <meta name="description" content="Scratchで作ろう「自動で迷路づくり」と「迷路で逃走中」毎回変わる迷路、そして初級はゴールの紙吹雪、中級から自動で追跡してくるハンター、上級者は自分で操作するプレイヤーを開発しちゃうぞ。">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+    <meta property="og:title" content="Scratchで作ろう「自動で迷路づくり」と「迷路で逃走中」" />
+    <meta property="og:description" content="Scratchで作ろう「自動で迷路づくり」と「迷路で逃走中」毎回変わる迷路、そして初級はゴールの紙吹雪、中級から自動で追跡してくるハンター、上級者は自分で操作するプレイヤーを開発しちゃうぞ。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://coderdojoome.github.io/report/report025.html" />
+    <meta property="og:image" content="https://coderdojoome.github.io/report/img/practice19/10-right2.png" />
+    <meta property="og:site_name" content="CoderDojo青梅" />
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
+  <!-- 上のプロパティSNSの画像差し替えること  -->
+  <h2>目次</h2>
+  <ul>
+    <li><a href="/report/report024.html">自動で迷路づくり</a></li>
+    <li><a href="/report/report025.html">迷路で逃走中</a></li>
+  </ul>
+
+<h1>【パート２】Scratchで作ろう「迷路で逃走中」</h1>
+<p>毎回変わる迷路が完成したら今度は、初級はゴールの紙吹雪、中級から自動で追跡してくるハンター、上級者は自分で操作するプレイヤーを開発しちゃうぞ。</p>
+
+<h2>ゴールで使えるド派手な演出（紙吹雪）</h2>
+<p><img src="img/practice19/01-paper.gif" class="img-fluid" alt=""></p>
+
+<h3>紙切れをつくろう</h3>
+<p>新しいスプライトを描いて作ります。<br />わざと中心からズラす。後で不規則性が賑やかな雰囲気になる。</p>
+<p><img src="img/practice19/02-paper1.png" class="img-fluid" alt=""></p>
+
+<h3>紙切れの位置</h3>
+<p>Ｘ座標はランダムに、Ｙ座標はこの辺（+160）</p>
+<p><img src="img/practice19/03-paper2.png" class="img-fluid" alt=""></p>
+
+<h3>紙切れを落下させる</h3>
+<p>上から下に落ちていく</p>
+<p><img src="img/practice19/04-paper3.png" class="img-fluid" alt=""></p>
+
+<h3>ここからチャレンジ</h3>
+<ol>
+    <li>回転しながら落ちていく</li>
+    <li>紙吹雪を複製する(30～50枚くらい）</li>
+    <li>色を変える</li>
+</ol>
+<p><img src="img/practice19/05-paper4.png" class="img-fluid" alt=""></p>
+
+
+
+
+
+<h2>(中級) 迷路を動き回るバグ（虫）</h2>
+<ul>
+    <li>毎回変わる迷路の続き</li>
+    <li>予想できないランダムな動き</li>
+</ul>
+<p>前回と同じ座標(X:-180, Y140)から迷路を描画していたら、真ん中がちょうど(X:0, Y0)のはずです。<br />
+１．バグの最初の位置はX0, Y0にする<br />
+２．ずっと彷徨います<br />
+<br />
+さて、どうする・・・？<br />
+</p>
+<p><img src="img/practice19/06-bug1.png" class="img-fluid" alt=""></p>
+
+<p>ヒント</p>
+<p>
+ヒント１．どちらを向くか？<br />
+<br />
+ヒント２．空いていれば、１マスの距離は40<br />
+<br />
+ヒント３．壁があろうがなかろうが進む<br />
+<br />
+ヒント４．壁があるなら進んだ分、戻ればいい<br />
+<br />
+ヒント５．千里の道も一歩から<br />
+</p>
+<p><img src="img/practice19/07-bug2.png" class="img-fluid" alt=""></p>
+
+
+
+<h2>(上級) 右手の法則をつかった（カニ）</h2>
+<p><img src="img/practice19/08-right1.png" class="img-fluid" alt=""></p>
+
+<h3>右手の壁に沿って移動（ステップ１）</h3>
+<p>
+    １．まずは１匹で作る。座標はX0, Y0<br />
+    ２．回転方法を[回転しない]にする<br />
+    ３．ずっと<br />
+    　　□□□□□<br />
+    ４．もし＜　＞たら<br />
+    　　□□□□□<br />
+    　　□□□□□<br />
+    ５．でなければ（壁に触れていなければ）<br />
+    　　□□□□□<br />
+    　　□□□□□<br />
+    ６．ずっとに戻る<br />
+</p>
+<p><img src="img/practice19/08-right2.gif" class="img-fluid" alt=""></p>
+
+<h3>右手の壁に沿って移動（ステップ２）</h3>
+<p>
+    １．まずは１匹で作る。座標はX0, Y0<br />
+    ２．回転方法を[回転しない]にする<br />
+    ３．ずっと<br />
+    　　<strong>【法則①】</strong><br />
+    ４．もし＜　＞たら<br />
+    　　<strong>【法則②】</strong><br />
+    　　□□□□□<br />
+    ５．でなければ（壁に触れていなければ）<br />
+    　　□□□□□<br />
+    　　<strong>【法則③】</strong><br />
+    ６．ずっとに戻る<br />
+</p>
+<p><img src="img/practice19/10-right2.png" class="img-fluid" alt=""></p>
+
+<h3>右手の壁に沿って移動（ステップ３）</h3>
+<p>
+    １．まずは１匹で作る。座標はX0, Y0<br />
+    ２．回転方法を[回転しない]にする<br />
+    ３．ずっと<br />
+    　　<strong>【法則①：進む】</strong><br />
+    ４．もし＜　＞たら<br />
+    　　<strong>【法則②：戻る】</strong><br />
+    　　<strong>【法則②：前に進めないから左を向く】</strong><br />
+    ５．でなければ（壁に触れていなければ）<br />
+    　　<strong>【法則③：進めたのでそのまま何もしない】</strong><br />
+    　　<strong>【法則③：もし右が空いていたら右を向く】</strong><br />
+    ６．ずっとに戻る<br />
+</p>
+<p><img src="img/practice19/10-right2.png" class="img-fluid" alt=""></p>
+
+<h3>右手の壁に沿って移動（ステップ４）</h3>
+<p>
+    １．まずは１匹で作る。座標はX0, Y0<br />
+    ２．回転方法を[回転しない]にする<br />
+    ３．ずっと<br />
+    　　<strong>【［適当］歩動かす】</strong><br />
+    ４．もし＜　壁に触れ　＞たら<br />
+    　　<strong>【移動した分、戻る】</strong><br />
+    　　<strong>【左を向く（前が壁の時）】</strong><br />
+    ５．でなければ（壁に触れていなければ）<br />
+    　　<strong>【何もしない（前が空いていた。その場にいる）】</strong><br />
+    　　<strong>【右を向く（右に壁が無いなら右に行く）】</strong><br />
+    ６．ずっとに戻る<br />
+    ７．完成したら複数クローンする<br />
+</p>
+<p><img src="img/practice19/10-right2.png" class="img-fluid" alt=""></p>
+
+
+
+
+
+
+
+  <!-- 主コンテンツここまで -->
+</div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("/header.html");
+    $("#commonFooter").load("/footer.html");
+  });
+</script>
+</body>
+</html>
