@@ -144,3 +144,8 @@ table {
 th, td {
 	border: solid 1px #333; /* 線の種類 太さ 色 */
 }
+
+.lime {
+	font: larger;
+	color: #006600;
+}
