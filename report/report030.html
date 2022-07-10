@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>第25, 26回 why!?大喜利とサーボモーター|CoderDojo青梅</title>
+    <meta name="keywords" content="Scratch, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
+    <meta name="description" content="みんなでwhy!?大喜利に挑戦。7月は「SDGs 陸の豊かさも守ろう」をテーマに自由に作ろう。午後はサーボモーターとLinuxネイティブGPIO操作を学習する。">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+    <meta property="og:title" content="第25, 26回 why!?大喜利とサーボモーター" />
+    <meta property="og:description" content="みんなでwhy!?大喜利に挑戦。7月は「SDGs 陸の豊かさも守ろう」をテーマに自由に作ろう。午後はサーボモーターとLinuxネイティブGPIO操作を学習する。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://coderdojoome.github.io/report/report030.html" />
+    <meta property="og:image" content="https://coderdojoome.github.io/report/img/practice23/00top.png" />
+    <meta property="og:site_name" content="CoderDojo青梅" />
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
+  <!-- 上のプロパティSNSの画像差し替えること  -->
+<p>しまったぁ。みんなと遊ぶのが楽しすぎて、作品の撮影を忘れてしまった。</p>
+
+<h1>第25, 26回 why!?大喜利とサーボモーター（2022年7月10日）</h1>
+<p>みんなでwhy!?大喜利に挑戦。7月は「SDGs 陸の豊かさも守ろう」をテーマに自由に作ろう。午後はサーボモーターとLinuxネイティブGPIO操作を学習する。</p>
+<p><img src="img/practice23/01overview.png" class="img-fluid" alt="会場全景 CoderDojo青梅"></p>
+
+<h2>今月の青梅Dojo出欠確認です</h2>
+<p>小中学生のニンジャは19人（会場11人［午前8人, 午後3人］＋オンライン8人）が参加しました。保護者5人とメンター5人。総勢29人でプログラミングを楽しみました。</p>
+<p><img src="img/practice23/02member.png" class="img-fluid" alt="参加者一覧"></p>
+
+<h2>午前のワークショップ（第25回）</h2>
+<p>参加者は３つから好きなテーマを選んでプログラミング制作に取り組みます。(1)みんなで共通テーマ (2)自分で決めるテーマ (3)入門Scratchレクチャー。みんなで共通テーマは、NHKのwhy!?大喜利にみんなで挑戦してみます。過去のテーマと作品を３つ紹介。そして７月テーマのうた動画をみんなで視聴してからワークショップ開始。オンラインのブレークアウトルームでは、なんと４人で作品を決めるためのブレーンストーミングでアイディア創出を練る相談をしてくれました！どんな作品が完成するのか楽しみです。</p>
+<p><img src="img/practice23/03workshop.png" class="img-fluid" alt="ワークショップ"></p>
+
+<h2>作品発表</h2>
+<p>みんなレベルが上がったので少しのプログラムでは完成にしない、まだ途中だから発表しないニンジャや途中だけど開発中のアイディアを発表してくれるニンジャ。大丈夫、今月のwhy!?大喜利は７～８月の２ヶ月間、応募締め切りまであと１回CoderDojoを開催できる。次回も続きをやろう！</p>
+<p><img src="img/practice23/04presentation.png" class="img-fluid" alt="作品発表"></p>
+
+<h2>午後のワークショップ（第26回）</h2>
+<p>前半はLinuxの勉強。Linuxの物理デバイスはファイルで操作できることを体験する。コマンドラインでGPIOデバイスを作成して、GPIOファイルに値1を書き込むとLEDが点灯すること、値0を書き込むとLEDが消灯することを学ぶ。後半は、はじめてのpython（パイソン）。まずは写経して値を変更してサーボモータがどのように動くのかを実験して学ぶ。指定した角度にモータを動かす。PWMを変えてモータ速度を変えてみる。</p>
+<p><img src="img/practice23/05servopy.png" class="img-fluid" alt="サーボモータ"></p>
+
+<h2>本日の参加者</h2>
+<p>オンラインにもたくさんのニンジャ。会場ニンジャのみなさんです。</p>
+<p><img src="img/practice23/06byebye.png" class="img-fluid" alt="本日の参加者"></p>
+
+
+<h3>次回は８月７日（日）を予定しています。</h3>
+
+  <!-- 主コンテンツここまで -->
+</div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("/header.html");
+    $("#commonFooter").load("/footer.html");
+  });
+</script>
+</body>
+</html>
