@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>ラズタンク |CoderDojo青梅</title>
+    <meta name="keywords" content="Scratch, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
+    <meta name="description" content="オンラインイベント(Gather Town)にログインする方法をお知らせします">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+    <meta property="og:title" content="Gather Town ログイン操作" />
+    <meta property="og:description" content="オンラインイベント(Gather Town)にログインする方法をお知らせします" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://coderdojoome.github.io/report/report032.html" />
+    <meta property="og:image" content="https://coderdojoome.github.io/report/img/practice25/02success.png" />
+    <meta property="og:site_name" content="CoderDojo青梅" />
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
+  <!-- 上のプロパティSNSの画像差し替えること  -->
+<h1>ラズタンク</h1>
+<p>ラズパイのプログラムです。</p>
+<p>最初に[readchar]をインストールします。$ sudo pip install readchar</p>
+<pre>
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import RPi.GPIO as GPIO    # _を使えるようにする
+import sys                 # _コマンドを使えるようにする
+import time                # _を使えるようにする
+import readchar            # _を検知できるようにする
+
+constLeftPWM = 17
+constLeftIN1 = 27      # Left  _
+constLeftIN2 = 22
+constRightPWM = 16     # Right _
+constRightIN1 = 20
+constRightIN2 = 21
+
+GPIO.setwarnings( False )               # GPIOの警告をOFFにする
+GPIO.setmode( GPIO.BCM )                # 入出力を0,1で制御する
+GPIO.setup( constLeftPWM,  GPIO.OUT )   # GPIOを_モードにする(センサー_ならGPIO.IN)
+GPIO.setup( constLeftIN1,  GPIO.OUT )
+GPIO.setup( constLeftIN2,  GPIO.OUT )
+GPIO.setup( constRightPWM, GPIO.OUT )
+GPIO.setup( constRightIN1, GPIO.OUT )
+GPIO.setup( constRightIN2, GPIO.OUT )
+
+pwmLeft = GPIO.PWM( constLeftPWM, 50 )  #50Hz
+pwmLeft.start( 0.0 )
+pwmRight = GPIO.PWM( constRightPWM, 50 )  #50Hz
+pwmRight.start( 0.0 )
+
+def moveForward():
+	GPIO.output( constLeftIN1, 0 )
+	GPIO.output( constLeftIN2, 0 )
+	GPIO.output( constRightIN1, 0 )
+	GPIO.output( constRightIN2, 0 )
+
+def speedSlow():
+	pwmLeft.ChangeDutyCycle( 50 )
+	pwmRight.ChangeDutyCycle( 50 )
+
+def speedHigh():
+	pwmLeft.ChangeDutyCycle( 100 )
+	pwmRight.ChangeDutyCycle( 100 )
+
+def moveBack():
+	GPIO.output( constLeftIN1, 0 )
+	GPIO.output( constLeftIN2, 0 )
+	GPIO.output( constRightIN1, 0 )
+	GPIO.output( constRightIN2, 0 )
+
+def moveLeft():
+	GPIO.output( constLeftIN1, 0 )
+	GPIO.output( constLeftIN2, 0 )
+	GPIO.output( constRightIN1, 0 )
+	GPIO.output( constRightIN2, 0 )
+
+def moveRight():
+	GPIO.output( constLeftIN1, 0 )
+	GPIO.output( constLeftIN2, 0 )
+	GPIO.output( constRightIN1, 0 )
+	GPIO.output( constRightIN2, 0 )
+
+def moveStop():
+	GPIO.output( constLeftIN1, 0 )
+	GPIO.output( constLeftIN2, 0 )
+	GPIO.output( constRightIN1, 0 )
+	GPIO.output( constRightIN2, 0 )
+
+def end():
+	pwmLeft.stop()
+	pwmRight.stop()
+	GPIO.cleanup()
+	sys.exit(0)
+
+######################################
+# メインルーチン
+######################################
+if __name__ == '__main__':
+
+	try:
+		while 1:
+			kb = readchar.readchar()
+			sys.stdout.write(kb)
+
+			if kb == 'w':
+				speedHigh()
+				moveForward()
+			if kb == 'z':
+				speedSlow()
+				moveBack()
+			if kb == 'a':
+				speedSlow()
+				moveLeft()
+			if kb == 's':
+				speedSlow()
+				moveRight()
+			if kb == 'x':
+				moveStop()
+			if kb == 'q':
+				end()
+			#time.sleep(3)
+
+	except KeyboardInterrupt:
+		moveStop()
+		end()
+    </pre>
+
+  <!-- 主コンテンツここまで -->
+</div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("/header.html");
+    $("#commonFooter").load("/footer.html");
+  });
+</script>
+</body>
+</html>
