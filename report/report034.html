@@ -84,6 +84,32 @@ def moveForward():
 	GPIO.output( constRightIN1, 0 )
 	GPIO.output( constRightIN2, 0 )
 
+def speedSlow():
+	pwmLeft.ChangeDutyCycle( 50 )
+	pwmRight.ChangeDutyCycle( 50 )
+
+def speedHigh():
+	pwmLeft.ChangeDutyCycle( 100 )
+	pwmRight.ChangeDutyCycle( 100 )
+
+def moveBack():
+	GPIO.output( constLeftIN1, 0 )
+	GPIO.output( constLeftIN2, 0 )
+	GPIO.output( constRightIN1, 0 )
+	GPIO.output( constRightIN2, 0 )
+
+def moveLeft():
+	GPIO.output( constLeftIN1, 0 )
+	GPIO.output( constLeftIN2, 0 )
+	GPIO.output( constRightIN1, 0 )
+	GPIO.output( constRightIN2, 0 )
+
+def moveRight():
+	GPIO.output( constLeftIN1, 0 )
+	GPIO.output( constLeftIN2, 0 )
+	GPIO.output( constRightIN1, 0 )
+	GPIO.output( constRightIN2, 0 )
+
 def moveStop():
 	GPIO.output( constLeftIN1, 0 )
 	GPIO.output( constLeftIN2, 0 )
@@ -107,7 +133,17 @@ if __name__ == '__main__':
 			sys.stdout.write(kb)
 
 			if kb == 'w':
+				speedHigh()
 				moveForward()
+			if kb == 'z':
+				speedSlow()
+				moveBack()
+			if kb == 'a':
+				speedSlow()
+				moveLeft()
+			if kb == 's':
+				speedSlow()
+				moveRight()
 			if kb == 'x':
 				moveStop()
 			if kb == 'q':
@@ -118,9 +154,6 @@ if __name__ == '__main__':
 		moveStop()
 		end()
     </pre>
-
-    <hr>
-    <a href="report034.html">next</a>
 
   <!-- 主コンテンツここまで -->
 </div> <!-- <limegreen-container -->
