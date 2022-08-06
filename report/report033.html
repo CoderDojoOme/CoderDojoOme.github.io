@@ -45,11 +45,20 @@
   <!-- 主コンテンツ -->
 
   <!-- 上のプロパティSNSの画像差し替えること  -->
+  <h1>ラズタンク電子工作</h1>
+  <h3>手順１．配線が正しいか検査をします。</h3>
+  <h3>手順２．電源がオンになっていること（かたずけるときは必ずオフにすること）。</h3>
+  <h3>手順３．python プログラムにエラーがないこと。キー入力で動くよ<br />　[w]進む　[x]ストップ　[z]後進　[a]左旋回　[s]右旋回　[q]終了</h3>
+  <p></p>
 
-  <h1>ラズタンク</h1>
-  <p>ラズパイのプログラムです。</p>
-  <p>手順１．最初に[readchar]をインストールします。$ sudo pip install readchar</p>
-  <p>手順２．下記のプログラムを実行します。保存したファイル名がtank.pyの場合は、ターミナルのコマンドで $ python tank.py で実行します。</p>
+  <h2>配線図</h2>
+  <p>モータードライバー(TA7291P)、デュアルモーター、単三乾電池、ラズパイの４つをブレッドボード経由で配線します。</p>
+  <p><img src="img/practice26/moterdriver.png" class="img-fluid" alt="配線"></p>
+
+
+  <h2>ラズタンクの python プログラム</h2>
+  <p>最初に[readchar]をインストールします。$ sudo pip install readchar</p>
+  <p>下記のプログラムを実行します。保存したファイル名がtank.pyの場合は、ターミナルのコマンドで $ python tank.py で実行します。</p>
     <pre>
       #!/usr/bin/env python
       # -*- coding: utf-8 -*-
@@ -156,6 +165,19 @@
           moveStop()
           end()
   </pre>
+  <p>プログラムの実行は python [ファイル名] だよ。</p>
+  <pre>
+    $ python tank.py
+
+    [w]キーで進む  [x]キーでストップ
+
+  </pre>
+
+  <h2>単三乾電池</h2>
+  <p>動かすときは電源をオンにしますが、しまっておく時は電源をオフにしてください。</p>
+
+  <h2>動かないとき／分からないときはここから質問してください</h2>
+  <p>📨 <a href="https://docs.google.com/forms/d/e/1FAIpQLSecZV-4K8hYDC48I4Zshyz2mgEEvxKkg0Ncj1juJvL9N0mdfg/viewform">プログラミング道場＜なんでも相談＞</a></p>
 
 
   <!-- 主コンテンツここまで -->
