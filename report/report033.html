@@ -63,22 +63,22 @@
       #!/usr/bin/env python
       # -*- coding: utf-8 -*-
         
-      import RPi.GPIO as GPIO
-      import sys
-      import time
-      import readchar
+      import RPi.GPIO as GPIO         # GPIOを使う準備
+      import sys                      # Linuxコマンドを使う準備
+      import time                     # 時間系のコマンドを使う準備
+      import readchar                 # キーボード入力を調べる準備
       
-      constLeftPWM = 17
+      constLeftPWM = 17               # GPIO番号
       constLeftIN1 = 27
       constLeftIN2 = 22
       constRightPWM = 16
       constRightIN1 = 20
       constRightIN2 = 21
       
-      GPIO.setwarnings( False )
-      GPIO.setmode( GPIO.BCM )
-      GPIO.setup( constLeftPWM,  GPIO.OUT )
-      GPIO.setup( constLeftIN1,  GPIO.OUT )
+      GPIO.setwarnings( False )              # 警告を表示させない(過去にGPIOを使っていると警告表示される)
+      GPIO.setmode( GPIO.BCM )               # GPIO番号で命令する
+      GPIO.setup( constLeftPWM,  GPIO.OUT )  # GPIO17を出力モードにする
+      GPIO.setup( constLeftIN1,  GPIO.OUT )  # GPIO27  〃  (以下同じ)
       GPIO.setup( constLeftIN2,  GPIO.OUT )
       GPIO.setup( constRightPWM, GPIO.OUT )
       GPIO.setup( constRightIN1, GPIO.OUT )
@@ -90,9 +90,9 @@
       pwmRight.start( 0.0 )
       
       def moveForward():
-        GPIO.output( constLeftIN1, 1 )
+        GPIO.output( constLeftIN1, 1 )         # モータ左の入力を[1,0]とする
         GPIO.output( constLeftIN2, 0 )
-        GPIO.output( constRightIN1, 1 )
+        GPIO.output( constRightIN1, 1 )        # モータ左の入力を[1,0]とする
         GPIO.output( constRightIN2, 0 )
       
       def speedSlow():
