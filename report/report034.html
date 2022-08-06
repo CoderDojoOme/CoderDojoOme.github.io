@@ -47,113 +47,114 @@
   <!-- 上のプロパティSNSの画像差し替えること  -->
 <h1>ラズタンク</h1>
 <p>ラズパイのプログラムです。</p>
-<p>最初に[readchar]をインストールします。$ sudo pip install readchar</p>
+<p>手順１．最初に[readchar]をインストールします。$ sudo pip install readchar</p>
+<p>手順２．下記のプログラムを実行します。保存したファイル名がtank.pyの場合は、ターミナルのコマンドで $ python tank.py で実行します。</p>
 <pre>
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import RPi.GPIO as GPIO    # _を使えるようにする
-import sys                 # _コマンドを使えるようにする
-import time                # _を使えるようにする
-import readchar            # _を検知できるようにする
-
-constLeftPWM = 17
-constLeftIN1 = 27      # Left  _
-constLeftIN2 = 22
-constRightPWM = 16     # Right _
-constRightIN1 = 20
-constRightIN2 = 21
-
-GPIO.setwarnings( False )               # GPIOの警告をOFFにする
-GPIO.setmode( GPIO.BCM )                # 入出力を0,1で制御する
-GPIO.setup( constLeftPWM,  GPIO.OUT )   # GPIOを_モードにする(センサー_ならGPIO.IN)
-GPIO.setup( constLeftIN1,  GPIO.OUT )
-GPIO.setup( constLeftIN2,  GPIO.OUT )
-GPIO.setup( constRightPWM, GPIO.OUT )
-GPIO.setup( constRightIN1, GPIO.OUT )
-GPIO.setup( constRightIN2, GPIO.OUT )
-
-pwmLeft = GPIO.PWM( constLeftPWM, 50 )  #50Hz
-pwmLeft.start( 0.0 )
-pwmRight = GPIO.PWM( constRightPWM, 50 )  #50Hz
-pwmRight.start( 0.0 )
-
-def moveForward():
-	GPIO.output( constLeftIN1, 0 )
-	GPIO.output( constLeftIN2, 0 )
-	GPIO.output( constRightIN1, 0 )
-	GPIO.output( constRightIN2, 0 )
-
-def speedSlow():
-	pwmLeft.ChangeDutyCycle( 50 )
-	pwmRight.ChangeDutyCycle( 50 )
-
-def speedHigh():
-	pwmLeft.ChangeDutyCycle( 100 )
-	pwmRight.ChangeDutyCycle( 100 )
-
-def moveBack():
-	GPIO.output( constLeftIN1, 0 )
-	GPIO.output( constLeftIN2, 0 )
-	GPIO.output( constRightIN1, 0 )
-	GPIO.output( constRightIN2, 0 )
-
-def moveLeft():
-	GPIO.output( constLeftIN1, 0 )
-	GPIO.output( constLeftIN2, 0 )
-	GPIO.output( constRightIN1, 0 )
-	GPIO.output( constRightIN2, 0 )
-
-def moveRight():
-	GPIO.output( constLeftIN1, 0 )
-	GPIO.output( constLeftIN2, 0 )
-	GPIO.output( constRightIN1, 0 )
-	GPIO.output( constRightIN2, 0 )
-
-def moveStop():
-	GPIO.output( constLeftIN1, 0 )
-	GPIO.output( constLeftIN2, 0 )
-	GPIO.output( constRightIN1, 0 )
-	GPIO.output( constRightIN2, 0 )
-
-def end():
-	pwmLeft.stop()
-	pwmRight.stop()
-	GPIO.cleanup()
-	sys.exit(0)
-
-######################################
-# メインルーチン
-######################################
-if __name__ == '__main__':
-
-	try:
-		while 1:
-			kb = readchar.readchar()
-			sys.stdout.write(kb)
-
-			if kb == 'w':
-				speedHigh()
-				moveForward()
-			if kb == 'z':
-				speedSlow()
-				moveBack()
-			if kb == 'a':
-				speedSlow()
-				moveLeft()
-			if kb == 's':
-				speedSlow()
-				moveRight()
-			if kb == 'x':
-				moveStop()
-			if kb == 'q':
-				end()
-			#time.sleep(3)
-
-	except KeyboardInterrupt:
-		moveStop()
-		end()
-    </pre>
+	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
+		
+	import RPi.GPIO as GPIO
+	import sys
+	import time
+	import readchar
+	
+	constLeftPWM = 17
+	constLeftIN1 = 27
+	constLeftIN2 = 22
+	constRightPWM = 16
+	constRightIN1 = 20
+	constRightIN2 = 21
+	
+	GPIO.setwarnings( False )
+	GPIO.setmode( GPIO.BCM )
+	GPIO.setup( constLeftPWM,  GPIO.OUT )
+	GPIO.setup( constLeftIN1,  GPIO.OUT )
+	GPIO.setup( constLeftIN2,  GPIO.OUT )
+	GPIO.setup( constRightPWM, GPIO.OUT )
+	GPIO.setup( constRightIN1, GPIO.OUT )
+	GPIO.setup( constRightIN2, GPIO.OUT )
+	
+	pwmLeft = GPIO.PWM( constLeftPWM, 50 )  #50Hz
+	pwmLeft.start( 0.0 )
+	pwmRight = GPIO.PWM( constRightPWM, 50 )  #50Hz
+	pwmRight.start( 0.0 )
+	
+	def moveForward():
+		GPIO.output( constLeftIN1, 1 )
+		GPIO.output( constLeftIN2, 0 )
+		GPIO.output( constRightIN1, 1 )
+		GPIO.output( constRightIN2, 0 )
+	
+	def speedSlow():
+		pwmLeft.ChangeDutyCycle( 50 )
+		pwmRight.ChangeDutyCycle( 50 )
+	
+	def speedHigh():
+		pwmLeft.ChangeDutyCycle( 100 )
+		pwmRight.ChangeDutyCycle( 100 )
+	
+	def moveBack():
+		GPIO.output( constLeftIN1, 0 )
+		GPIO.output( constLeftIN2, 1 )
+		GPIO.output( constRightIN1, 0 )
+		GPIO.output( constRightIN2, 1 )
+	
+	def moveLeft():
+		GPIO.output( constLeftIN1, 0 )
+		GPIO.output( constLeftIN2, 1 )
+		GPIO.output( constRightIN1, 1 )
+		GPIO.output( constRightIN2, 0 )
+	
+	def moveRight():
+		GPIO.output( constLeftIN1, 1 )
+		GPIO.output( constLeftIN2, 0 )
+		GPIO.output( constRightIN1, 0 )
+		GPIO.output( constRightIN2, 1 )
+	
+	def moveStop():
+		GPIO.output( constLeftIN1, 0 )
+		GPIO.output( constLeftIN2, 0 )
+		GPIO.output( constRightIN1, 0 )
+		GPIO.output( constRightIN2, 0 )
+	
+	def end():
+		pwmLeft.stop()
+		pwmRight.stop()
+		GPIO.cleanup()
+		sys.exit(0)
+	
+	######################################
+	# メインルーチン
+	######################################
+	if __name__ == '__main__':
+	
+		try:
+			while 1:
+				kb = readchar.readchar()
+				sys.stdout.write(kb)
+	
+				if kb == 'w':
+					speedHigh()
+					moveForward()
+				if kb == 'z':
+					speedSlow()
+					moveBack()
+				if kb == 'a':
+					speedSlow()
+					moveLeft()
+				if kb == 's':
+					speedSlow()
+					moveRight()
+				if kb == 'x':
+					moveStop()
+				if kb == 'q':
+					end()
+				#time.sleep(3)
+	
+		except KeyboardInterrupt:
+			moveStop()
+			end()
+</pre>
 
   <!-- 主コンテンツここまで -->
 </div> <!-- <limegreen-container -->
