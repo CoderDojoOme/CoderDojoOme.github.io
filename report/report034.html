@@ -9,9 +9,9 @@
     <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>ラズタンク |CoderDojo青梅</title>
+    <title>第28, 29回 Gather Town で「リスト変数」|CoderDojo青梅</title>
     <meta name="keywords" content="Scratch, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
-    <meta name="description" content="オンラインイベント(Gather Town)にログインする方法をお知らせします">
+    <meta name="description" content="電子工作は夏休みの自由研究の対象にするため少人数限定して開催。Scratchプログラミングは、コロナ第７波の感染が身近に迫るため会場開催は中止して全てオンライン開催としました。">
     <!-- favicon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
@@ -28,11 +28,11 @@
       gtag('config', 'UA-35574608-3');
     </script>
 
-    <meta property="og:title" content="Gather Town ログイン操作" />
-    <meta property="og:description" content="オンラインイベント(Gather Town)にログインする方法をお知らせします" />
+    <meta property="og:title" content="第28, 29回 Gather Town で「リスト」変数の体験" />
+    <meta property="og:description" content="電子工作は夏休みの自由研究の対象にするため少人数限定して開催。Scratchプログラミングは、コロナ第７波の感染が身近に迫るため会場開催は中止して全てオンライン開催としました。" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://coderdojoome.github.io/report/report032.html" />
-    <meta property="og:image" content="https://coderdojoome.github.io/report/img/practice25/02success.png" />
+    <meta property="og:url" content="https://coderdojoome.github.io/report/report034.html" />
+    <meta property="og:image" content="https://coderdojoome.github.io/report/img/practice25/07presentation.png" />
     <meta property="og:site_name" content="CoderDojo青梅" />
 
   </head>
@@ -45,116 +45,32 @@
   <!-- 主コンテンツ -->
 
   <!-- 上のプロパティSNSの画像差し替えること  -->
-<h1>ラズタンク</h1>
-<p>ラズパイのプログラムです。</p>
-<p>手順１．最初に[readchar]をインストールします。$ sudo pip install readchar</p>
-<p>手順２．下記のプログラムを実行します。保存したファイル名がtank.pyの場合は、ターミナルのコマンドで $ python tank.py で実行します。</p>
-<pre>
-	#!/usr/bin/env python
-	# -*- coding: utf-8 -*-
-		
-	import RPi.GPIO as GPIO
-	import sys
-	import time
-	import readchar
-	
-	constLeftPWM = 17
-	constLeftIN1 = 27
-	constLeftIN2 = 22
-	constRightPWM = 16
-	constRightIN1 = 20
-	constRightIN2 = 21
-	
-	GPIO.setwarnings( False )
-	GPIO.setmode( GPIO.BCM )
-	GPIO.setup( constLeftPWM,  GPIO.OUT )
-	GPIO.setup( constLeftIN1,  GPIO.OUT )
-	GPIO.setup( constLeftIN2,  GPIO.OUT )
-	GPIO.setup( constRightPWM, GPIO.OUT )
-	GPIO.setup( constRightIN1, GPIO.OUT )
-	GPIO.setup( constRightIN2, GPIO.OUT )
-	
-	pwmLeft = GPIO.PWM( constLeftPWM, 50 )  #50Hz
-	pwmLeft.start( 0.0 )
-	pwmRight = GPIO.PWM( constRightPWM, 50 )  #50Hz
-	pwmRight.start( 0.0 )
-	
-	def moveForward():
-		GPIO.output( constLeftIN1, 1 )
-		GPIO.output( constLeftIN2, 0 )
-		GPIO.output( constRightIN1, 1 )
-		GPIO.output( constRightIN2, 0 )
-	
-	def speedSlow():
-		pwmLeft.ChangeDutyCycle( 50 )
-		pwmRight.ChangeDutyCycle( 50 )
-	
-	def speedHigh():
-		pwmLeft.ChangeDutyCycle( 100 )
-		pwmRight.ChangeDutyCycle( 100 )
-	
-	def moveBack():
-		GPIO.output( constLeftIN1, 0 )
-		GPIO.output( constLeftIN2, 1 )
-		GPIO.output( constRightIN1, 0 )
-		GPIO.output( constRightIN2, 1 )
-	
-	def moveLeft():
-		GPIO.output( constLeftIN1, 0 )
-		GPIO.output( constLeftIN2, 1 )
-		GPIO.output( constRightIN1, 1 )
-		GPIO.output( constRightIN2, 0 )
-	
-	def moveRight():
-		GPIO.output( constLeftIN1, 1 )
-		GPIO.output( constLeftIN2, 0 )
-		GPIO.output( constRightIN1, 0 )
-		GPIO.output( constRightIN2, 1 )
-	
-	def moveStop():
-		GPIO.output( constLeftIN1, 0 )
-		GPIO.output( constLeftIN2, 0 )
-		GPIO.output( constRightIN1, 0 )
-		GPIO.output( constRightIN2, 0 )
-	
-	def end():
-		pwmLeft.stop()
-		pwmRight.stop()
-		GPIO.cleanup()
-		sys.exit(0)
-	
-	######################################
-	# メインルーチン
-	######################################
-	if __name__ == '__main__':
-	
-		try:
-			while 1:
-				kb = readchar.readchar()
-				sys.stdout.write(kb)
-	
-				if kb == 'w':
-					speedHigh()
-					moveForward()
-				if kb == 'z':
-					speedSlow()
-					moveBack()
-				if kb == 'a':
-					speedSlow()
-					moveLeft()
-				if kb == 's':
-					speedSlow()
-					moveRight()
-				if kb == 'x':
-					moveStop()
-				if kb == 'q':
-					end()
-				#time.sleep(3)
-	
-		except KeyboardInterrupt:
-			moveStop()
-			end()
-</pre>
+<p>電子工作は少人数で。みんなはオンライン開催で。</p>
+
+<h1>第28, 29回 Gather Town で「リスト」変数の体験</h1>
+<p>しばらく会場開催を継続していました。コロナ第７波の感染が身近に迫るため急遽、会場開催は中止してオンライン開催とするため、少しでも会場の雰囲気を再現しようとCoderDojo青梅では初めてのギャザー・タウンのオンライン開催を試みました。</p>
+<p>ギャザー・タウンを試したところ、RPGのような遊び心満載なのでプログラミングをそっちのけで会場探索をしてしまうのが難点だが、子ども同士でオンラインでも(むしろ会場よりも)仲良くなるきっかけを得られるのが利点だった。</p>
+<p><img src="img/practice25/00gathertown.png" class="img-fluid" alt="会場全景 CoderDojo青梅"></p>
+
+<h2>本日の青梅Dojo出欠確認です</h2>
+<p>会場申込をしていた４組のご家族には申し訳ありません。安心を最優先で急遽、オンライン開催とさせていただきました。前回の会場開催はニンジャ19名、オンラインでは半分の8名でした。</p>
+<p><img src="img/practice25/01attendee.png" class="img-fluid" alt="参加者一覧"></p>
+
+<h2>本日のワークショップ</h2>
+<p>ほぼ毎月、Scratchワンポイント講座でScratchの機能を紹介しています。今月は「リスト」変数の使い方。早速、興味をもってもらい「リスト」を使った作品を発表してくれました。</p>
+<p><img src="img/practice25/04listsample.png" class="img-fluid" alt="ワークショップ"></p>
+
+<p>会場レイアウトはグループ作業ともくもく机などを大学生メンターが用意してくれたので、ニンジャのみなさんは好きな場所を選んで楽しんでいました。</p>
+<p><img src="img/practice25/05meeting.png" class="img-fluid" alt="ワークショップ"></p>
+
+<p>電子工作の部は前日土曜日に学習室で少人数で開催。ラズベリーパイを搭載したキャタピラ駆動のタンクを作っています。モーターやキャタピラは自宅ワークをしてもらって、当日は午前・午後合わせて4時間を使い切っても完成まではまだまだ時間が足りないけど、４時間たっぷりと飽きることなく集中してがんばっていました。</p>
+<p><img src="img/practice25/06rasptank.png" class="img-fluid" alt="ワークショップ"></p>
+
+<h2>作品発表</h2>
+<p>Gather Townの発表会場に全員集合!! よく見るとテーブル席にあふれて座れないメンターに壁側の臨時パイプ椅子を即席で用意、すごいぞ大学生メンター。そして発表者は登壇席の左側に列をつくって並んで発表を待つというルールで、順番に作品を発表してくれました。</p>
+<p><img src="img/practice25/07presentation.png" class="img-fluid" alt="作品発表"></p>
+
+<p>次回は9月11日(日)です。</p>
 
   <!-- 主コンテンツここまで -->
 </div> <!-- <limegreen-container -->
