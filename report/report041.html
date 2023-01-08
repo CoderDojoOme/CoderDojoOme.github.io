@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>第39,40回 ニンジャ25名。Scratch降雪の横ステージ と 歩行者用信号機|CoderDojo青梅</title>
+    <meta name="keywords" content="Scratch, Python, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング" />
+    <meta name="description" content="午前のみんなで同じテーマScratchは遠近の降雪アニメと横ステージ切り替え。午後はGPIOを操作するためのLinuxコマンドとPythonコーディング体験をするため、みんなで歩行者用信号機をシミュレーションしました。">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-35574608-3');
+    </script>
+
+    <meta property="og:title" content="第39,40回 ニンジャ25名。Scratch降雪の横ステージ と 歩行者用信号機|CoderDojo青梅" />
+    <meta property="og:description" content="午前のみんなで同じテーマScratchは遠近の降雪アニメと横ステージ切り替え。午後はGPIOを操作するためのLinuxコマンドとPythonコーディング体験をするため、みんなで歩行者用信号機をシミュレーションしました。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://coderdojoome.github.io/report/report041.html" />
+    <meta property="og:image" content="https://coderdojoome.github.io/report/img/practice32/00top.png" />
+    <meta property="og:site_name" content="CoderDojo青梅" />
+
+  </head>
+  
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<!-- 共通のヘッダー・メニュー -->
+<div id="commonHeader"></div>
+<div class="container">
+  <div class="limegreen-container">  
+  <!-- 主コンテンツ -->
+
+  <!-- 上のプロパティSNSの画像差し替えること  -->
+<p>午前と午後の２回開催</p>
+
+<h1>第39,40回 ニンジャ25名。降雪の横ステージ と 歩行者用信号機</h1>
+<p>午前のみんなで同じテーマScratchは遠近の降雪アニメと横ステージ切り替え。午後はGPIOを操作するためのLinuxコマンドとPythonコーディング体験をするため、みんなで歩行者用信号機をシミュレーションしました。</p>
+
+<h2>本日の青梅Dojo出欠確認です</h2>
+<p>参加者は午前16名・午後9名のニンジャ合計25名。ご家族は保護者・妹さん達が8名以上。メンターは5名+見学2名。延べ40名以上。</p>
+<p><img src="img/practice32/01attendee.png" class="img-fluid" alt="本日の参加者"></p>
+
+<h2>本日のワークショップ１．Scratchプログラミング（初中級）</h2>
+<p>みんなで共通のテーマは、冬なので降雪と横ステージ型のプラットフォーム作り。教材は<a href="https://funnygeekjp.com/mnt/272/" target="_blank">📰青梅のメンターブログ</a>を見ながら、そしてメンターが操作手順をサポートしながら制作。</p>
+<p><img src="img/practice32/03workshop.png" class="img-fluid" alt="scratchプログラミング"></p>
+
+<h3>本日のテーマ：横にステージ移動するアニメーションをつくろう。主人公の左右移動は［矢印キー］または［micro:bit］で。</h3>
+<p><img src="img/practice32/06practice.png" class="img-fluid" alt="scratchプログラミング"></p>
+
+<h3>umikabutoさんの作品例</h3>
+<p><img src="img/practice32/example.gif" class="img-fluid" alt="作品例"></p>
+<p>作り方は<a href="https://funnygeekjp.com/mnt/272/" target="_blank">📰こちら</a></p>
+
+<h2>午前の作品発表会</h2>
+<p>オンライン参加者も会場参加者も一緒に作品を見せあいます。CoderDojoで楽しいところは、同じテーマでもみんながつくる作品は同じものがないことです。家よりも高く積みあがった雪を穴掘りして地上に出るオープニングアニメは、そのあとのゲーム本体が楽しみ。自分でテーマを決めて制作・作品発表してくれるみんなも個性的なので、いつも様々な気付きを得ることができます。今日は最大拡大して横スクロールする技も子どもたちから教えてもらいました。</p>
+<p><img src="img/practice32/02presentation.png" class="img-fluid" alt="Scratch作品発表"></p>
+
+<h2>本日のワークショップ２．ラズパイ＆電子工作［歩行者用信号機］</h2>
+<p>見てください、大人も子供もみんな真剣に「歩行者用信号機のシミュレーション」に取り組んでいます。今日覚えた事は、LinuxのシェルコマンドとPythonプログラミング体験。ラズパイで大切な知識は、LEDを点灯したり、押しボタンを検知したりする方法。GPIOという名前のディレクトリのファイルに[1][0]を記入したり読んだりして、LEDと押しボタンが繋がるラズパイのGPIOを操作します。<a href="https://funnygeekjp.com/mnt/317/" target="_blank">📰今日の設定手順はこちら</a>。</p>
+<p><img src="img/practice32/04workshop.png" class="img-fluid" alt="ラズパイ＆電子工作"></p>
+
+<h3>会場は第１・第２会議室を繋いだ大きさ</h3>
+<p>なんとオンライン参加者を表示するディスプレイ１台とプロジェクター２台で計３台を活用しています。</p>
+<p><img src="img/practice32/05view.png" class="img-fluid" alt="全景"></p>
+
+
+<h3>次回は2月12日(日)開催でーす。</h3>
+<p>Connpassでイベント告知するので、またの参加をお待ちしています。<a href="https://coderdojo-ome.connpass.com/" target="_blank">参加申し込みはこちらのConnpassから</a></p>
+
+<h3>青梅子どもふれあいフェスタ2022［1月15日(日)］にも出店しまーす。</h3>
+<p><a href="https://www.city.ome.tokyo.jp/uploaded/attachment/46574.pdf" target="_blank"><img src="img/practice31/10festa2022.jpg" class="img-fluid" alt="青梅子どもふれあいフェスタ2022"></a></p>
+
+<h2><a href="m&#97;i&#108;t&#111;:ic&#104;iro&#46;k&#97;n&#111;2&#64;&#97;s&#97;h&#105;&#46;e&#109;ai&#108;&#46;n&#101;&#46;j&#112;" class="card-link"><img src="../img/i-mail.gif" alt="Eメール" width="32" height="32" border="0" />CoderDojo青梅のメンターへのメールはこちら</a></h2>
+<p>😃</p>
+
+<!-- 主コンテンツここまで -->
+</div> <!-- <limegreen-container -->
+</div> <!-- <container> -->
+
+<!-- 共通のフッター -->
+<div id="commonFooter"></div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- My Header and Footer -->
+<script>
+  $(function() {
+    $("#commonHeader").load("/header.html");
+    $("#commonFooter").load("/footer.html");
+  });
+</script>
+</body>
+</html>
