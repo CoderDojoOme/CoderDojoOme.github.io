@@ -74,6 +74,18 @@
         <p class="card-text">
           <a href="https://closedsite-b3bc1.firebaseapp.com/?category=ome#" class="btn btn-info">投稿</a>
           コメント</p>
+      <p>⬇️今月のテーマ番号にジャンプ</p>
+      <script type="text/javascript">
+        function jumpFunnyGeek() {
+          nextURL = 'https://funnygeekjp.com/mnt/' + document.getElementById('urlInput').value;
+          window.location.href = nextURL;
+        }
+      </script>
+      <form>
+        <label>https://funnygeekjp.com/mnt/</label>
+        <input type="text" id="urlInput">
+        <input type="button" value="ジャンプする" onclick="jumpFunnyGeek();"> 
+      </form>
       </div>
 
           <h1>「CoderDojo 青梅」何ができるの？</h1>
