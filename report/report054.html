@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <title>第62,63回 CoderDojo青梅カップ2023, ラズタンク | CoderDojo青梅</title>
+    <meta
+      name="keywords"
+      content="Scratch, Python, 青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング"
+    />
+    <meta
+      name="description"
+      content="ニンジャと一緒に18ヶ月間、開発したラズタンクの競技会を開催しました。
+      午前はいつも通り、はじめて参加者の入門＆Scratch初級コースを開催。共通テーマはインベーダーゲームⅡ（前回の続きです）。
+      午後は８台が出走。メンター２台もゲスト出走。"
+    />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="/favicon.ico"
+      type="image/vnd.microsoft.icon"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <!-- Squad theme CSS -->
+    <link href="/css/style.css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-35574608-3");
+    </script>
+
+    <meta
+      property="og:title"
+      content="第62,63回 CoderDojo青梅カップ2023, ラズタンク | CoderDojo青梅"
+    />
+    <meta
+      property="og:description"
+      content="ニンジャと一緒に18ヶ月間、開発したラズタンクの競技会を開催しました。
+      午前はいつも通り、はじめて参加者の入門＆Scratch初級コースを開催。共通テーマはインベーダーゲームⅡ（前回の続きです）。
+      午後は８台が出走。メンター２台もゲスト出走。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://coderdojoome.github.io/report/report054.html"
+    />
+    <meta
+      property="og:image"
+      content="https://coderdojoome.github.io/report/img/practice45/00top.png"
+    />
+    <meta property="og:site_name" content="CoderDojo青梅" />
+  </head>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- 共通のヘッダー・メニュー -->
+    <div id="commonHeader"></div>
+    <div class="container">
+      <div class="limegreen-container">
+        <!-- 主コンテンツ -->
+
+        <!-- 上のプロパティSNSの画像差し替えること  -->
+        <p>2023/12/10 午前と午後の２回開催</p>
+        <h1>第62,63回 CoderDojo青梅カップ2023, ラズタンク競技大会</h1>
+        <p>
+          申し込みは午前23,午後11。季節柄当日キャンセル6名、気温差大きいので栄養いっぱいとってキチンと寝ようね！<br />
+          ニンジャと一緒に18ヶ月間、開発したラズタンクの競技会を開催しました。<br />
+          午前はいつも通り、はじめて参加者の入門＆Scratch初級コースを開催。共通テーマはインベーダーゲームⅡ（前回の続きです）。<br />
+          午後は８台が出走。メンター２台もゲスト出走。
+        </p>
+
+        <h2>本日の青梅Dojo出欠確認です</h2>
+        <p>
+          今日参加できなかったニンジャ6名、みんな～来月までにしっかり元気になって次回は一緒に遊ぼうね！<br />
+          参加できたニンジャは午前17名・午後11名の<strong>延べ28名</strong>。保護者家族含めて34名、メンター6名と見学1名で<strong>延べ41名</strong>が参加してくれました。<br />
+          今月のサプライズはオーストラリアの夏休み中を利用して来日中の「ひなちゃん」「れおちゃん」とお母さんが訪問に来てくれました。ご家族に会えてとっても嬉しかったです。来てくれてありがとう！
+        </p>
+        <p>
+          <img
+            src="img/practice45/01attendee.png"
+            class="img-fluid"
+            alt="本日の参加者"
+          />
+        </p>
+        <p>
+          ゲストはマイクロマウス競技で受賞経験のある「厚木ロボット研究会の西崎さん」がデモ走行をしてくれました！
+        </p>
+        <p>
+          <img
+            src="img/practice45/02micromouse.png"
+            class="img-fluid"
+            alt="マイクロマウス協議会受賞経験のある西崎さんのデモ"
+          />
+        </p>
+
+        <h2>午前ワークショップ（Scratchプログラミング入門・初級）</h2>
+        <p>
+          午前は自分の興味にあわせて３ブロックに分かれてワークショップを行います。
+        </p>
+
+        <h3>１．みんなで共通テーマ</h3>
+        <p>
+          本日のScratch入門コースの講師はメンター「トリさん」がインベーダーゲームⅡの作り方をレクチャーしています。
+        </p>
+        <p>
+          <img
+            src="img/practice45/03invader.png"
+            class="img-fluid"
+            alt="Scratch講座（レベルアップ編）"
+          />
+        </p>
+
+        <h3>２．はじめて参加ニンジャ向け入門プログラミング</h3>
+        <p>
+          　今日はじめて参加してくれたニンジャとニンジャ候補（年長さん）。驚いたことに年長なのに「右矢印キーを押したら右方向へ10歩進む」と「左方向」を教えたら、自分で「上下にも動かしたい」といって自分でコードを作り始めたこと。しかもマウス移動と右左ボタンをスムーズに操作できている！
+          残り30分は斜め四方向にもコードを完成！。年長さんでここまでプログラミングできる子、みたことない。一緒にいたメンターも驚いていました。兄ニンジャはアスレチックのスタートとゴールを独自アニメで工夫して入門はクリアしました。
+        </p>
+        <p>
+          <img
+            src="img/practice45/04beginner.png"
+            class="img-fluid"
+            alt="Scratch入門コース"
+          />
+        </p>
+
+        <h3>３．自分で自由にテーマを決める編</h3>
+        <p>
+          オリジナルScratch作品を作るニンジャ。マイクラの桜🌸？新バージョンで制作した世界を動画で発表してくれたニンジャ。<br />
+          そして午後の大会に備えてラズタンクの整備・チューニング・魔改造をする上級ニンジャのみなさん
+        </p>
+        <p>
+          <img
+            src="img/practice45/05rastank.png"
+            class="img-fluid"
+            alt="Raspberry Pi で自走ロボット「ラズタンク」"
+          />
+        </p>
+        <p>
+          <img
+            src="img/practice45/06rastank.png"
+            class="img-fluid"
+            alt="Raspberry Pi で自走ロボット「ラズタンク」"
+          />
+        </p>
+
+        <h3>４．オンラインはお休み中です</h3>
+        <p>
+          オンラインメンターの「しん」さんが日本にいるので４月までオンラインはお休みです。
+        </p>
+
+        <h3>30分間は、みんなの成果発表会</h3>
+        <p>
+          初めて参加者、共通テーマ、自分で好きなテーマ。発表は何でもOK。マイクラ作品の説明を動画で紹介してくれるひとあり。
+          共通テーマであっても、ニンジャひとり一人の個性が出ています。
+        </p>
+        <p>
+          <img
+            src="img/practice45/07presen.png"
+            class="img-fluid"
+            alt="発表会"
+          />
+        </p>
+
+        <h2>午後ワークショップ（ラズパイと電子工作）</h2>
+        <p>ついに「🏆CoderDojo青梅カップ2023 競技大会」が開催されました。</p>
+        <p></p>
+        <p>
+          <img
+            src="img/practice45/08dojocup.png"
+            class="img-fluid"
+            alt="CoderDojo青梅カップ2023 競技大会"
+          />
+        </p>
+
+        <h3>競技１．陸橋乗り越えチャレンジ</h3>
+        <p>
+          ■コースは、陸橋型・直線のはしご状の路面（坂道）をスムーズに乗り越えるだけ<br />
+          ■ルールは、陸橋から落ちないこと・壊れないこと<br />
+          ■課題（得点）<br />
+          ・チャレンジ［+1］<br />
+          ・坂道を乗り越え［+1］<br />
+          ・逆走急坂［+2］
+        </p>
+        <p>
+          <img
+            src="img/practice45/09part1.png"
+            class="img-fluid"
+            alt="競技２"
+          />
+        </p>
+
+        <h3>競技２．リモート操作・迷路探索</h3>
+        <p>
+          ■コースは、簡単な迷路風の遠隔地にいるラズタンクをリモート操作する。カメラ画像をPCで見て操作する。<br />
+          ■ルールは、PC画面に表示されるラズパイカメラの画像を頼りにゴールを目指すこと。コースを背にしてPC画面を見る。後ろを振り向かない<br />
+          ■課題（得点）<br />
+          ・ひらがな発見［+1］<br />
+          ・キーワード正解［+1］<br />
+          ・画像撮影［+1］
+        </p>
+        <p>
+          <img
+            src="img/practice45/11part2.png"
+            class="img-fluid"
+            alt="競技２"
+          />
+        </p>
+        <p>
+          <img
+            src="img/practice45/10part2.png"
+            class="img-fluid"
+            alt="競技２"
+          />
+        </p>
+
+        <h3>競技３．チーム対抗ピンポン玉運び</h3>
+        <p>
+          ■コースは、グランドの周りの机が操縦席。制限時間５分間。目視でラズタンクを運転してコースを完走すること<br />
+          ■ルールは、コートを半分にして、相手のコートに多くピンポン玉を運んだチームが勝ち<br />
+          ■課題（得点）<br />
+          コース途中に［ひらがな］看板が４つある。［ひらがな］を４つ並べた単語を審判へ報告<br />
+          ・参加したひと［+1］<br />
+          ・勝ったチーム全員［+3］
+        </p>
+        <p>
+          <img
+            src="img/practice45/12part3.png"
+            class="img-fluid"
+            alt="競技３"
+          />
+        </p>
+
+        <p>今日の模様はYoutubeでも動画を閲覧できます</p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/TDB0UQw5DAQ?si=gDkIsRIQsyRGTyXh"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+
+        <h3>次回は1月14日(日)開催です。</h3>
+        <p>
+          Connpassでイベント告知。参加をお待ちしています。<a
+            href="https://coderdojo-ome.connpass.com/"
+            target="_blank"
+            >参加申し込みはこちらのConnpassから</a
+          >
+        </p>
+
+        <h4>
+          <a
+            href="m&#97;i&#108;t&#111;:ic&#104;iro&#46;k&#97;n&#111;2&#64;&#97;s&#97;h&#105;&#46;e&#109;ai&#108;&#46;n&#101;&#46;j&#112;"
+            class="card-link"
+            ><img
+              src="../img/i-mail.gif"
+              alt="Eメール"
+              width="32"
+              height="32"
+              border="0"
+            />CoderDojo青梅にご質問メールはこちら</a
+          >
+        </h4>
+        <p>😃</p>
+
+        <!-- 主コンテンツここまで -->
+      </div>
+      <!-- <limegreen-container -->
+    </div>
+    <!-- <container> -->
+
+    <!-- 共通のフッター -->
+    <div id="commonFooter"></div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My Header and Footer -->
+    <script>
+      $(function () {
+        $("#commonHeader").load("/header.html");
+        $("#commonFooter").load("/footer.html");
+      });
+    </script>
+  </body>
+</html>
