@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS ↓ head内部に他のCSSより先に置く -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <title>子どものためのプログラミング道場|CoderDojo青梅</title>
+    <meta
+      name="keywords"
+      content="青梅市, 青梅, パソコン, ボランティア, 子ども, 小学校, 中学校, CoderDojo, プログラミング, プログラミング教室"
+    />
+    <meta
+      name="description"
+      content="子どもたちが自らプログラミングを学習するための環境づくりを応援します。"
+    />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="favicon.ico"
+      type="image/vnd.microsoft.icon"
+    />
+    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-35574608-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-35574608-3");
+    </script>
+
+    <!-- datadog rum ここから -->
+    <script
+      src="https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      window.DD_RUM &&
+        window.DD_RUM.init({
+          clientToken: "pub21e5ff3cb206fe33780b0160bee1f272",
+          applicationId: "4fd0bf89-6576-4dce-9118-01a7cd8d03ff",
+          site: "datadoghq.com",
+          service: "coderdojoome",
+          env: "github.pages",
+          // Specify a version number to identify the deployed version of your application in Datadog
+          // version: '1.0.0',
+          sessionSampleRate: 100,
+          sessionReplaySampleRate: 20,
+          trackUserInteractions: true,
+          trackResources: true,
+          trackLongTasks: true,
+          defaultPrivacyLevel: "mask-user-input",
+        });
+    </script>
+    <!-- datadog rum ここまで -->
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- 共通のヘッダー・メニュー -->
+    <div id="commonHeader"></div>
+
+    <div class="container">
+      <div class="limegreen-container">
+        <!-- 主コンテンツ -->
+        <h1>アーカイブ（永続的履歴）</h1>
+        <h2>
+          本サイト(CoderDojo青梅)は移転しました。<a
+            href="https://funnygeekjp.com/coderdojo-ome/"
+            >移転先のページ</a
+          >
+        </h2>
+        <p>　</p>
+        <h2>子どもたちのための無料のプログラミング道場</h2>
+        <p>
+          2020年から小学校で、2021年は中学校、そして2022年は高校でもプログラミング教育が必修となります。
+          今はまだ多くの人が単なるパソコン教育と誤解されているかも知れません。プログラミングは教えて習得
+          するよりは自分から学んで得意としていくものであり、また自ら学ぶ子は、同じ趣味・特技の仲間を作ることで
+          成長します。そこで、７～１７歳を対象としたプログラミング仲間の集まれる場所作りをしたいと考えています。
+        </p>
+      </div>
+    </div>
+
+    <!-- 最初の巨大イメージ画像 -->
+    <div class="container-fluid">
+      <div class="jumbotron jumbotron-extend" style="width: 100%" ;>
+        <h1 class="card-title bg-dark text-white" style="padding: 0.2em">
+          プログラムを遊びながら学ぼう！ 【参加費 無料】
+        </h1>
+        <p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">参加する</a>
+        </p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">体験のみ</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="limegreen-container">
+        <div class="card p-3 mb-5">
+          <p class="card-text">
+            <a href="report.html" class="btn btn-success">開催報告</a>
+            Scratch言語によるプログラミング。
+          </p>
+          <p class="card-text">
+            <a
+              href="https://closedsite-b3bc1.firebaseapp.com/?category=ome#"
+              class="btn btn-info"
+              >投稿</a
+            >
+            コメント
+          </p>
+          <p>⬇️今月のテーマ番号にジャンプ</p>
+          <script type="text/javascript">
+            function jumpFunnyGeek() {
+              nextURL =
+                "https://funnygeekjp.com/mnt/" +
+                document.getElementById("urlInput").value;
+              window.location.href = nextURL;
+            }
+          </script>
+          <form>
+            <label
+              ><a href="https://funnygeekjp.com/mnt/"
+                >https://funnygeekjp.com/mnt/</a
+              ></label
+            >
+            <input type="text" id="urlInput" />
+            <input
+              type="button"
+              value="ジャンプする"
+              onclick="jumpFunnyGeek();"
+            />
+          </form>
+        </div>
+
+        <h1>「CoderDojo 青梅」何ができるの？</h1>
+
+        <div class="row">
+          <p>
+            <img
+              src="img/recruit.png"
+              alt="ボランティア募集！"
+              class="img-fluid"
+            />
+          </p>
+        </div>
+
+        <h2>CoderDojo 青梅とは？</h2>
+        <div class="row">
+          <div class="col-xs-2 col-lg-2">
+            <img
+              src="img/cdome180px.png"
+              alt="CoderDojo 青梅 ロゴ"
+              style="width: 180px"
+            />
+          </div>
+          <div class="col-xs-10 col-lg-10">
+            <p>
+              2020年から小学校で<strong>プログラミング教育が必修化</strong>となりました。
+              今はまだ多くの人が単なる<strong>パソコン教育と誤解</strong>されているかも知れません。
+              プログラミングは教えて習得するよりは<strong>自分から学んで得意としていくもの</strong>であり、
+              また自ら学ぶ子は、同じ趣味特技の仲間を作ることで成長します。そこで、7～17歳を対象とした
+              <strong>プログラミング仲間の集まれる場所</strong
+              >作りをしたいと考えています。東京都のCoderDojoとしては最西端になる青梅市で。
+            </p>
+          </div>
+        </div>
+
+        <img
+          src="img/title_point.png"
+          alt="初心者/未経験者向けコース"
+          class="img-fluid"
+        />
+        <p>
+          プログラミングという共通のテーマを持って、子どもたちが作成したアニメーションやゲームなどの作品を発表できる場所、同じ興味を持った子どもたちの集まる場所を用意します。
+          小学校から中学生のプログラミング初心者／未経験者向けであり初めての人も心配せずにご参加ください。わからないことや知りたいことがあればメンターに相談することもできます。
+          パソコン操作が不安という保護者の方には事前のPC操作レクチャーも開催していますので、お問合せください。希望者にはプログラミング教室も提供します。
+        </p>
+
+        <h2>参加するには</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-lg-6">
+              <div class="row">
+                <div class="col-3">
+                  <img
+                    src="img/icon01ninja.png"
+                    alt="参加資格"
+                    width="100%"
+                    max-width="100px"
+                    style="margin: 4px"
+                  />
+                </div>
+                <div class="col-9">
+                  <h4>参加できる人：</h4>
+                  7～17歳の小中学生
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-6">
+              <div class="row">
+                <div class="col-3">
+                  <img
+                    src="img/icon02free.png"
+                    alt="無料, Free"
+                    width="100%"
+                    max-width="100px"
+                    style="margin: 4px"
+                  />
+                </div>
+                <div class="col-9">
+                  <h4>参加費：</h4>
+                  Free。無料です。
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-lg-6">
+              <div class="row">
+                <div class="col-3">
+                  <img
+                    src="img/icon03aply.png"
+                    alt="申込方法"
+                    width="100%"
+                    max-width="100px"
+                    style="margin: 4px"
+                  />
+                </div>
+                <div class="col-9">
+                  <h4>申し込み：</h4>
+                  イベントサイト「<a href="connpass.html">Connpass</a
+                  >」に登録ください。
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-6">
+              <div class="row">
+                <div class="col-3">
+                  <img
+                    src="img/icon04pc.png"
+                    alt="用意するもの"
+                    width="100%"
+                    max-width="100px"
+                    style="margin: 4px"
+                  />
+                </div>
+                <div class="col-9">
+                  <h4>必要なもの：</h4>
+                  オンライン参加は、パソコンとZoom用のインターネット接続。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>ここで学べること</h2>
+        <ul>
+          <li>
+            ニンジャ（子ども）たちには、基本、自由に自分の興味がある作品をつくってもらい、その作品を発表できる場所にします。
+          </li>
+          <li>
+            何をやればいいのか悩んでいるニンジャたちは、みんなで共通のテーマに沿って作品づくりをしましょう。
+          </li>
+          <li>
+            メンター/ボランティアの方々には、希望に応じて別枠で勉強会を企画したいと思います。
+          </li>
+        </ul>
+        <p>
+          同じ興味を持った子どもたちの集まる場所を用意し、みんなで広い知識の習得に励みます。
+        </p>
+        <p>
+          <img
+            src="report/img/b02scratch.gif"
+            class="img-fluid"
+            alt="scratch作品と参加者"
+          />
+        </p>
+        <p>
+          <img
+            src="report/img/b03ninja.gif"
+            class="img-fluid"
+            alt="参加者Ninjaのみんな"
+          />
+        </p>
+
+        <h2>プログラミング対象</h2>
+        <p>
+          Scratchほか、何でもOK（micro:bit、ラズパイ、WEBサイト制作、python 等）
+        </p>
+        <p>▼Scratch</p>
+        <p><img src="img/scratch.png" class="img-fluid" alt="Scratch" /></p>
+        <p>▼micro:bit</p>
+        <p><img src="img/microbit.png" class="img-fluid" alt="micro:bit" /></p>
+
+        <h2>開催方法</h2>
+        <p>
+          会場とオンラインの同時開催です。会場は東京都青梅市の福祉センター集会室に近隣の仲間が参加。オンラインは世界中から参加しています。ボランティアおよび参加したい子どもをいつでも募集しています。
+        </p>
+        <p>
+          <img
+            src="img/meet_room.png"
+            class="img-fluid"
+            alt="会場とオンラインの同時開催"
+          />
+        </p>
+        <p>保護者や姉妹兄弟で参加しているニンジャもいます。</p>
+        <p>
+          <img src="img/meet_work.png" class="img-fluid" alt="会場の風景" />
+        </p>
+
+        <!-- 動画プロモーション -->
+        <div class="card-columns">
+          <div class="card shadow-sm bg-white youtube_frame">
+            <iframe
+              src="https://www.youtube.com/embed/J801-zeVCao?controls=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- カレンダー
+    <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=Y19jbGFzc3Jvb21iNWFiZGQwNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%230047a8&amp;showTitle=1&amp;showDate=1&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=1&amp;showTz=0&amp;title=CoderDojo%E9%9D%92%E6%A2%85%E3%81%AE%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" style="border:solid 1px #777" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+       -->
+
+        <!-- footer section -->
+        <hr />
+        <div class="card-columns">
+          <div class="card border-success mb-3">
+            <div class="card-header">プロフィール</div>
+            <div class="card-body text-success">
+              <h5 class="card-title"><img src="img/kano2.png" />鹿野 市郎</h5>
+              <p class="card-text">
+                CoderDojo 青梅　▼プログラミング教育とITサポート（<a
+                  href="https://funnygeekjp.com/"
+                  target="_blank"
+                  >FunnyGeek</a
+                >） ▼パブリッククラウドのコンサル＆アーキテクト（<a
+                  href="https://qiita.com/1Kano"
+                  target="_blank"
+                  >Qiita</a
+                >）
+              </p>
+              <p>
+                <a href="me.html" class="btn btn-outline-success"
+                  >主宰者プロフィール…</a
+                >
+              </p>
+              <a href="https://www.facebook.com/ichiro.kano.5" class="card-link"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+              <a href="https://github.com/IchiroKano" class="card-link"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ichiro-kano-17870ba5/"
+                class="card-link"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a href="https://twitter.com/1_Kano2" class="card-link"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+              <a
+                href="m&#97;i&#108;t&#111;:ic&#104;iro&#46;k&#97;n&#111;2&#64;&#97;s&#97;h&#105;&#46;e&#109;ai&#108;&#46;n&#101;&#46;j&#112;"
+                class="card-link"
+                ><img
+                  src="img/i-mail.gif"
+                  alt="Eメール"
+                  width="32"
+                  height="32"
+                  border="0"
+                />
+                メール</a
+              >
+            </div>
+          </div>
+
+          <div class="card border-success mb-3">
+            <div class="card-header">登録団体</div>
+            <div class="card-body text-success">
+              <!--<h5 class="card-title"><img src="img/画像ファイル" >タイトル</h5>-->
+              <p class="card-text">
+                CoderDojo青梅は、東京都 青梅市社会福祉協議会
+                の青梅ボランティア・市民活動団体です。
+              </p>
+            </div>
+          </div>
+
+          <div class="card border-success mb-3">
+            <div class="card-header">お世話になっている団体</div>
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <h5 class="card-title align-content-center text-center">
+                  <img
+                    src="img/rainbow_s.png"
+                    class="img-fluid"
+                    alt="Rainbow Room"
+                  />
+                </h5>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body text-success">
+                  <p class="card-text">
+                    不登校支援<br />Rainbow Room<br />青梅市フリースペース
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <h5 class="card-title align-content-center text-center">
+                  <img
+                    src="img/kodomomiraiome.jpg"
+                    class="img-fluid"
+                    alt="青梅こども未来"
+                  />
+                </h5>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body text-success">
+                  <p class="card-text">
+                    特定非営利活動法人<br />青梅こども未来
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <h5 class="card-title align-content-center text-center">
+                  <img
+                    src="img/satozaidan.png"
+                    class="img-fluid"
+                    alt="青梅佐藤財団"
+                  />
+                </h5>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body text-success">
+                  <p class="card-text">公益財団法人<br />青梅佐藤財団</p>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-md-12">
+                <div class="card-body text-success">
+                  <p class="card-text">一般財団法人　科学技術継承財団</p>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <h5 class="card-title align-content-center text-center">
+                  <img
+                    src="img/sakura_internet.png"
+                    class="img-fluid"
+                    alt="SAKURA internet"
+                  />
+                </h5>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body text-success">
+                  <p class="card-text">さくらインターネット</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sitemap"></div>
+          <div class="card border-success mb-3">
+            <div class="card-header">サイトマップ</div>
+            <div class="card-body text-success">
+              <p class="card-text">
+                <a href="report.html">イベント開催の報告</a>
+              </p>
+              <p class="card-text"><a href="member.html">メンターの紹介</a></p>
+              <p class="card-text">
+                <a href="constitution.html">ボランティア会則</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- icons of FB github in twitter -->
+          <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+          ></script>
+        </div>
+        <!-- card deck -->
+
+        <!-- 主コンテンツここまで -->
+      </div>
+      <!-- <limegreen-container -->
+    </div>
+    <!-- <container> -->
+
+    <!-- 共通のフッター -->
+    <div id="commonFooter"></div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My Header and Footer -->
+    <script>
+      $(function () {
+        $("#commonHeader").load("/header.html");
+        $("#commonFooter").load("/footer.html");
+      });
+    </script>
+  </body>
+</html>

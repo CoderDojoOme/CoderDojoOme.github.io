@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>        <loc>https://coderdojoome.github.io/index.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/aboutus.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/connpass.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/constitution.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/contact.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/donation.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/example.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/hint.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/me.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/member.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/prepare.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/recruitment.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/report.html</loc><changefreq>monthly</changefreq>    </url>
-    <url>        <loc>https://coderdojoome.github.io/schedule.html</loc><changefreq>monthly</changefreq>    </url>
+    <url>        <loc>https://coderdojoome.github.io/archive.html</loc>    </url>
+    <url>        <loc>https://coderdojoome.github.io/member.html</loc>    </url>
     <url>        <loc>https://coderdojoome.github.io/report/report001.html</loc>    </url>
     <url>        <loc>https://coderdojoome.github.io/report/report002.html</loc>    </url>
     <url>        <loc>https://coderdojoome.github.io/report/report003.html</loc>    </url>
